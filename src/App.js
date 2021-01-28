@@ -1,12 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from './components/Header';
 
-function App() {
-  return (
-    <div>
-      <h1>Tanuj Namdeo</h1>
+const App = () => {
+  return <>
+    <Header />
+    <div id="hero">
+      <div className="container">
+        <h3>Ride the</h3>
+        <h1>Electric<br></br>Revolution</h1>
+      </div>
     </div>
-  );
-}
+  </>
+};
 
 export default App;
