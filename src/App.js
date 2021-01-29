@@ -10,6 +10,8 @@ const App = () => {
         <h1>Electric<br></br>Revolution</h1>
       </div>
     </div>
+
+    <div id="about"></div>
   </>
 };
 
