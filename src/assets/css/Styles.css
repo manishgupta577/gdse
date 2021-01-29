@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;900&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -25,6 +26,40 @@ h1 {
   line-height: 86.4%;
 }
 
+/* BUTTON */
+.g-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.g-btn p {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: white;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0;
+  z-index: 101;
+}
+
+.g-btn img {
+  width: auto;
+  position: absolute;
+  left: 80px;
+  z-index: 100;
+  background-color: #cd0b42;
+  transition: all 0.1s linear;
+}
+
+.g-btn:hover img {
+  left: 100px;
+}
+
+/* HEADER */
 #header {
   position: absolute;
   width: 100%;
@@ -41,6 +76,7 @@ h1 {
   cursor: pointer;
 }
 
+/* HERO */
 #hero {
   background-color: black;
   height: 100vh;
@@ -64,8 +100,11 @@ h1 {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-left: -10px;
+  margin-bottom: 30px;
 }
 
+/* ABOUT */
 #about {
   height: 100vh;
 }
