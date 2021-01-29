@@ -121,7 +121,7 @@ p {
 
 #hero .hero-model {
   padding: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  /* border: 2px solid rgba(255, 255, 255, 0.1); */
 }
 
 #hero .hero-model p {
