@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;900&display=swap");
+@import url("../fonts/Gotham/stylesheet.css");
 
 * {
   box-sizing: border-box;
@@ -7,64 +8,63 @@
 }
 
 body {
-  background-color: black;
+  font-family: "Gotham";
 }
 
 h1 {
-  font-family: "Roboto", sans-serif;
+  font-size: 40px;
   font-weight: 900;
-  font-size: 6.7rem;
-  line-height: 86.4%;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 700;
 }
 
 h3 {
-  font-family: "Bebas Neue", cursive;
-  font-size: 1.25rem;
-  line-height: 86.4%;
-  letter-spacing: 0.6em;
-  text-transform: uppercase;
-  color: #ffffff;
+  font-size: 32px;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 400;
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /* BUTTON */
 .g-btn {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: relative;
+  border: 2px solid black;
+  width: fit-content;
+  border-radius: 40px;
+  padding: 14px 32px 4px;
   cursor: pointer;
-}
-
-.g-btn p {
-  position: absolute;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  color: white;
-  letter-spacing: 0.2em;
+  font-weight: 500;
+  font-size: 14px;
   text-transform: uppercase;
-  margin: 0;
-  z-index: 101;
-}
-
-.g-btn img {
-  width: auto;
-  position: absolute;
-  left: 80px;
-  z-index: 100;
-  background-color: #cd0b42;
   transition: all 0.1s linear;
 }
 
-.g-btn:hover img {
-  left: 100px;
+.dark {
+  background: #fff;
+  border-color: #fff;
+  color: #1e1e1e;
+}
+
+.dark:hover {
+  border-color: #1e1e1e;
+  background-color: #1e1e1e;
+  color: #f6f6f6;
 }
 
 /* HEADER */
-#header {
+/* #header {
   position: absolute;
   width: 100%;
   padding-top: 30px;
@@ -78,64 +78,127 @@ p {
 
 .hamburger {
   cursor: pointer;
+} */
+
+/* NAVBAR */
+#navbar {
+  top: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: top 0.3s, background 0.3s;
+  position: absolute;
+}
+
+.navbar {
+  font-family: "Gotham";
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.navbar .nav-item .nav-link {
+  color: #000;
+  padding: 0;
+}
+
+.navbar-brand {
+  color: #fc8804 !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.custom-toggler.navbar-toggler:focus {
+  border-color: rgba(0, 0, 0, 0);
 }
 
 /* HERO */
 #hero {
-  background-color: black;
   height: 100vh;
-  width: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  background: url("../img/back.png") center / cover no-repeat;
-  background-attachment: fixed;
+  text-align: center;
+  background-image: url("../img/back2.png");
 }
 
 #hero h1 {
-  background: linear-gradient(
-    to right,
-    #dd3549,
-    #ef7639,
-    #3c9399,
-    #3c9399,
-    #3c9399
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-left: -10px;
-  margin-bottom: 30px;
+  margin-top: -25px;
 }
 
-#hero .hero-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-#hero .hero-text {
-  margin: 20px;
-}
-
-#hero .hero-model {
-  padding: 20px;
-  /* border: 2px solid rgba(255, 255, 255, 0.1); */
-}
-
-#hero .hero-model p {
-  font-weight: 300;
-  font-size: 10px;
-  line-height: 86.4%;
-  margin-top: 30px;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  text-align: center;
-  color: #ffffff;
-}
-
-/* ABOUT */
+/* ABOUT PAGE */
 #about {
-  height: 100vh;
+  padding: 100px 0 80px;
+  transition: all 0.4s linear;
+}
+
+#about h1 {
+  font-weight: 400;
+  font-size: 30px;
+}
+
+#about h2 {
+  font-weight: 500;
+  font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #393c41;
+}
+
+#about p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #393c41;
+}
+
+#about.bg-change-black {
+  background-color: #000;
+}
+
+#empty {
+  background-color: #fff;
+  transition: all 0.4s linear;
+  height: 40vh;
+}
+
+#empty.bg-change-black {
+  background-color: #000;
+}
+
+#made {
+  padding: 100px 0 80px;
+  transition: all 0.4s linear;
+  background-color: #fff;
+}
+
+#made h1 {
+  font-weight: 400;
+  font-size: 30px;
+  color: #fff;
+}
+
+#made h2 {
+  font-weight: 500;
+  font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: #c6c3be;
+}
+
+#made hr {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#made p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #c6c3be;
+}
+
+#made.bg-change-black {
+  background-color: #000;
 }
