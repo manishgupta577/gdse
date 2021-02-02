@@ -172,7 +172,8 @@ p {
 #made {
   padding: 100px 0 80px;
   transition: all 0.4s linear;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #000;
 }
 
 #made h1 {
