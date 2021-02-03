@@ -40,7 +40,8 @@ p {
 
 /* BUTTON */
 .g-btn {
-  border: 2px solid black;
+  display: inline-block;
+  border: 2px solid #1e1e1e;
   width: fit-content;
   border-radius: 40px;
   padding: 14px 32px 4px;
@@ -49,6 +50,14 @@ p {
   font-size: 14px;
   text-transform: uppercase;
   transition: all 0.1s linear;
+  background-color: #1e1e1e;
+  color: #f6f6f6;
+}
+
+.g-btn:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #1e1e1e;
 }
 
 .dark {
@@ -64,28 +73,13 @@ p {
 }
 
 /* HEADER */
-/* #header {
-  position: absolute;
-  width: 100%;
-  padding-top: 30px;
-}
-
-#header .header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hamburger {
-  cursor: pointer;
-} */
-
 /* NAVBAR */
 #navbar {
   top: 0;
   background: rgba(0, 0, 0, 0);
   transition: top 0.3s, background 0.3s;
   position: absolute;
+  z-index: 1000;
 }
 
 .navbar {
@@ -121,13 +115,20 @@ p {
 #hero {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  background-image: url("../img/back2.png");
+  background-image: url("../img/back3.jpg");
+  background-size: cover;
 }
 
 #hero h1 {
   margin-top: -25px;
+}
+
+#hero img {
+  width: 600px;
 }
 
 /* ABOUT PAGE */
@@ -153,20 +154,6 @@ p {
   font-size: 14px;
   line-height: 21px;
   color: #393c41;
-}
-
-#about.bg-change-black {
-  background-color: #000;
-}
-
-#empty {
-  background-color: #fff;
-  transition: all 0.4s linear;
-  height: 40vh;
-}
-
-#empty.bg-change-black {
-  background-color: #000;
 }
 
 #made {
@@ -198,8 +185,4 @@ p {
   font-size: 14px;
   line-height: 21px;
   color: #c6c3be;
-}
-
-#made.bg-change-black {
-  background-color: #000;
 }

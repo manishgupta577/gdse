@@ -2,6 +2,7 @@ import React from "react";
 import logoBlack from "../assets/img/logoblack.png";
 import Button from '../components/Button'
 import hamburger from '../assets/img/hamburger.svg'
+import { Link } from "react-router-dom";
 
 const Header = () => {
     // return (
@@ -27,16 +28,16 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto d-lg-flex align-items-center">
                         <li className="nav-item mt-2 ml-5">
-                            <a className="nav-link" href="#">Home</a>
+                            <Link className="nav-link" to="/">Home</Link>
                         </li>
                         <li className="nav-item mt-2 ml-5">
-                            <a className="nav-link" href="#">Products</a>
+                            <Link className="nav-link" to="/products">Products</Link>
                         </li>
                         <li className="nav-item mt-2 ml-5">
-                            <a className="nav-link" href="#">About Us</a>
+                            <Link className="nav-link" to="/about">About Us</Link>
                         </li>
                         <li className="nav-item mt-2 ml-5">
-                            <a className="nav-link" href="#">Contact Us</a>
+                            <Link className="nav-link" to="/contact">Contact Us</Link>
                         </li>
                     </ul>
                 </div>

@@ -1,22 +1,15 @@
 import React from "react";
 
+import Header from "../components/Header";
 import Button from "../components/Button";
-import ScrollMagic from "scrollmagic";
 
 import aboutImg from "../assets/img/aboutImg.png";
 import aboutCycle from "../assets/img/aboutCycle.png";
 
 const About = () => {
-  const controller = new ScrollMagic.Controller();
-  const scene1 = new ScrollMagic.Scene({
-    triggerElement: "#empty",
-  })
-    // .addIndicators()
-    .setClassToggle("#about, #empty, #made", "bg-change-black")
-    .addTo(controller);
-
   return (
     <>
+      <Header />
       <section id="about">
         <div className="container">
           <div className="row justify-content-center align-items-center">
@@ -60,9 +53,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/* <img className="img-fluid" src={aboutCycle} alt="Cycle Image" /> */}
-
-      <section id="empty"></section>
+      <img className="img-fluid" src={aboutCycle} alt="Cycle Image" />
 
       <section id="made">
         <div className="container">
