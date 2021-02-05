@@ -44,15 +44,17 @@ const Home = () => {
                             </div>
                         </section>
                         <Tween from={{ x: "-100%" }} to={{ x: "0%" }}>
-                            <section className="panel black panel-text">
+                            <section className="panel black info-panel">
                                 <div className="row no-gutters align-items-center justify-content-center full-height">
                                     <div className="col-md-6">
-                                        <center>
-                                            <div className="w-50">
-                                                <h1>Precision spares</h1>
-                                                <p>Our reputation is built on the durability of the type of quality materials we use in the e-bike. We use precision machineries and tools to carve out some of the most beautiful design available in the industry today.</p>
-                                            </div>
-                                        </center>
+                                        <div className="panel-text">
+                                            <center>
+                                                <div className="w-50">
+                                                    <h1>Precision spares</h1>
+                                                    <p>Our reputation is built on the durability of the type of quality materials we use in the e-bike. We use precision machineries and tools to carve out some of the most beautiful design available in the industry today.</p>
+                                                </div>
+                                            </center>
+                                        </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="panel-bg panel-bg-1"></div>
@@ -61,32 +63,36 @@ const Home = () => {
                             </section>
                         </Tween>
                         <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
-                            <section className="panel black panel-text">
+                            <section className="panel black info-panel">
                                 <div className="row no-gutters align-items-center justify-content-center full-height">
                                     <div className="col-md-6">
-                                        <center>
-                                            <div className="w-50">
-                                                <h1>Precision spares</h1>
-                                                <p>Our reputation is built on the durability of the type of quality materials we use in the e-bike. We use precision machineries and tools to carve out some of the most beautiful design available in the industry today.</p>
-                                            </div>
-                                        </center>
+                                        <div className="panel-bg panel-bg-2"></div>
                                     </div>
                                     <div className="col-md-6">
-                                        <div className="panel-bg panel-bg-2"></div>
+                                        <div className="panel-text">
+                                            <center>
+                                                <div className="w-50">
+                                                    <h1>Precision spares</h1>
+                                                    <p>Our reputation is built on the durability of the type of quality materials we use in the e-bike. We use precision machineries and tools to carve out some of the most beautiful design available in the industry today.</p>
+                                                </div>
+                                            </center>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
                         </Tween>
                         <Tween from={{ y: "-100%" }} to={{ y: "0%" }}>
-                            <section className="panel black panel-text">
+                            <section className="panel black info-panel">
                                 <div className="row no-gutters align-items-center justify-content-center full-height">
                                     <div className="col-md-6">
-                                        <center>
-                                            <div className="w-50">
-                                                <h1>Precision spares</h1>
-                                                <p>Our reputation is built on the durability of the type of quality materials we use in the e-bike. We use precision machineries and tools to carve out some of the most beautiful design available in the industry today.</p>
-                                            </div>
-                                        </center>
+                                        <div className="panel-text">
+                                            <center>
+                                                <div className="w-50">
+                                                    <h1>Precision spares</h1>
+                                                    <p>Our reputation is built on the durability of the type of quality materials we use in the e-bike. We use precision machineries and tools to carve out some of the most beautiful design available in the industry today.</p>
+                                                </div>
+                                            </center>
+                                        </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="panel-bg panel-bg-3"></div>
