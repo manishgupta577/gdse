@@ -3,6 +3,7 @@ import { Controller, Scene } from "react-scrollmagic";
 
 import Header from "../components/Header";
 import Button from "../components/Button";
+import Footer from "../components/Footer";
 
 import aboutImg from "../assets/img/aboutImg.png";
 import aboutCycle from "../assets/img/aboutCycle.png";
@@ -12,7 +13,7 @@ const About = () => {
     <>
       <Header />
       <Controller>
-        <Scene triggerElement="#made" classToggle="bg-black" indicators={true}>
+        <Scene triggerElement="#made" classToggle="bg-black">
           <section id="about">
             <div className="container">
               <div className="row justify-content-center align-items-center">
@@ -33,26 +34,6 @@ const About = () => {
                     occaecat cupidatat non proident, sunt in culpa qui officia
                     deserunt mollit anim id est laborum.
                   </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </p>
                 </div>
                 <div className="col-lg-6">
                   <img className="img-fluid" src={aboutImg} alt="About Image" />
@@ -60,9 +41,8 @@ const About = () => {
               </div>
             </div>
           </section>
-          {/* <img className="img-fluid" src={aboutCycle} alt="Cycle Image" /> */}
         </Scene>
-        <Scene classToggle="bg-black" indicators={true}>
+        <Scene classToggle="bg-black">
           <section id="made">
             <div className="container">
               <div className="row justify-content-center align-items-center">
@@ -93,6 +73,7 @@ const About = () => {
           </section>
         </Scene>
       </Controller>
+      <Footer />
     </>
   );
 };

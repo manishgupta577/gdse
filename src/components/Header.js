@@ -1,7 +1,6 @@
 import React from "react";
 import logoBlack from "../assets/img/logoblack.png";
 import Button from '../components/Button'
-import hamburger from '../assets/img/hamburger.svg'
 import { Link } from "react-router-dom";
 
 const Header = () => {

@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 900;
   font-style: normal;
 }
@@ -131,6 +131,63 @@ p {
   width: 600px;
 }
 
+#pinContainer {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#pinContainer .panel {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  text-align: center;
+}
+
+.panel-text {
+  height: 100vh;
+}
+
+.panel-text h1 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #c6c3be;
+  text-align: left;
+}
+
+.panel-text p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #717171;
+  text-align: left;
+}
+
+.panel.black {
+  background-color: #000;
+}
+
+.panel-bg {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.panel-bg-1 {
+  background-image: url("../img/panel1.jpg");
+}
+
+.panel-bg-2 {
+  background-image: url("../img/panel2.jpg");
+}
+
+.panel-bg-3 {
+  background-image: url("../img/panel3.jpg");
+}
+
+.full-height {
+  height: 100%;
+}
 /* ABOUT PAGE */
 #about {
   padding: 100px 0 80px;
@@ -193,4 +250,70 @@ p {
 
 #made.bg-black {
   background-color: #000;
+}
+
+/* CONTACT */
+#contact {
+  padding: 80px 0;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus,
+input:focus {
+  border-color: transparent !important;
+}
+
+/* FOOTER */
+#footer {
+  background-color: #1e1e1e;
+  padding: 80px 0;
+}
+
+#footer .links {
+  margin-top: 30px;
+}
+
+#footer .links a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #eee;
+}
+
+#footer .links a:hover {
+  color: #717171;
+}
+
+#footer h1 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #c6c3be;
+}
+
+#footer p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 40px;
+  color: #717171;
+}
+
+#footer .social object {
+  margin-right: 10px;
+  cursor: pointer !important;
+  border-radius: 50%;
+  filter: invert(99%) sepia(1%) saturate(2072%) hue-rotate(75deg)
+    brightness(113%) contrast(100%);
+}
+
+#footer .social object:hover {
+  filter: invert(9%) sepia(97%) saturate(5472%) hue-rotate(243deg)
+    brightness(116%) contrast(136%);
 }
