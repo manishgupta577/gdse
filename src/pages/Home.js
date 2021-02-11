@@ -1,109 +1,68 @@
 import React from "react";
-import { Controller, Scene } from "react-scrollmagic";
-import { Tween, Timeline } from "react-gsap";
 
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Footer from "../components/Footer"
 
-import cycle from "../assets/img/cycle.png";
+import AwesomeSlider from 'react-awesome-slider';
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import 'react-awesome-slider/dist/styles.css';
+
+import cycle1 from "../assets/img/cycle1.png";
+import _3dbtn from "../assets/img/3dbtn.svg";
+import hex from "../assets/img/hex.svg";
 import panel1 from "../assets/img/panel1.jpg";
 // import video from '../assets/img/video.mp4';
+
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Home = () => {
     return (
         <>
             <Header />
-            {/* <section id="hero">
-        <div className="container-fluid">
-          <div className="row justify-content-center align-items-center">
-            <div className="col">
-              <h4>Ride the</h4>
-              <h3>Electric Revolution</h3>
-              <img className="img-fluid" src={cycle} alt="Cycle" />
-              <p>Tanuj</p>
-              <Button text="Explore models" />
-            </div>
-          </div>
-        </div>
-      </section> */}
-            <Controller>
-                <Scene triggerHook="onLeave" duration="300%" pin>
-                    <Timeline wrapper={<div id="pinContainer" />}>
-                        <section id="hero" className="panel">
-                            <div className="container-fluid">
-                                <div className="row justify-content-center align-items-center">
-                                    <div className="col">
-                                        <h4>Ride the</h4>
-                                        <h3>Electric Revolution</h3>
-                                        <img className="img-fluid" src={cycle} alt="Cycle" />
-                                        <p>Tanuj</p>
-                                        <Button text="Explore models" />
-                                    </div>
+            <section id="hero">
+                <AutoplaySlider play={true} bullets={false} interval={6000} organicArrows={false} className="hero-slider">
+                    <div className="hero-slider-child">
+                        <div className="container">
+                            <div className="text">
+                                <h1>Award Winning <br /> <span className="red">E-Bike</span>  Manufacturer</h1>
+                                <p>12000 Sq. Ft. of manufacturing facility, World class Anti Dumping solution.</p>
+                                <div className="btns mt-5">
+                                    <Button text="Products" />
+                                    <Button text="Virtual tour" />
                                 </div>
                             </div>
-                        </section>
-                        <Tween from={{ x: "-100%" }} to={{ x: "0%" }}>
-                            <section className="panel black info-panel">
-                                <div className="row no-gutters align-items-center justify-content-center full-height">
-                                    <div className="col-md-6">
-                                        <div className="panel-text">
-                                            <center>
-                                                <div className="w-50">
-                                                    <h1>Precision spares</h1>
-                                                    <p>Our reputation is built on the durability of the type of quality materials we use in the e-bike. We use precision machineries and tools to carve out some of the most beautiful design available in the industry today.</p>
-                                                </div>
-                                            </center>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <div className="panel-bg panel-bg-1"></div>
-                                    </div>
-                                </div>
-                            </section>
-                        </Tween>
-                        <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
-                            <section className="panel black info-panel">
-                                <div className="row no-gutters align-items-center justify-content-center full-height">
-                                    <div className="col-md-6">
-                                        <div className="panel-bg panel-bg-2"></div>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <div className="panel-text">
-                                            <center>
-                                                <div className="w-50">
-                                                    <h1>Precision spares</h1>
-                                                    <p>Our reputation is built on the durability of the type of quality materials we use in the e-bike. We use precision machineries and tools to carve out some of the most beautiful design available in the industry today.</p>
-                                                </div>
-                                            </center>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </Tween>
-                        <Tween from={{ y: "-100%" }} to={{ y: "0%" }}>
-                            <section className="panel black info-panel">
-                                <div className="row no-gutters align-items-center justify-content-center full-height">
-                                    <div className="col-md-6">
-                                        <div className="panel-text">
-                                            <center>
-                                                <div className="w-50">
-                                                    <h1>Precision spares</h1>
-                                                    <p>Our reputation is built on the durability of the type of quality materials we use in the e-bike. We use precision machineries and tools to carve out some of the most beautiful design available in the industry today.</p>
-                                                </div>
-                                            </center>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <div className="panel-bg panel-bg-3"></div>
-                                    </div>
-                                </div>
-                            </section>
-                        </Tween>
-                    </Timeline>
-                </Scene>
-            </Controller>
+                        </div>
+                        <div className="td-cta">
+                            <img src={_3dbtn} alt="3dbtn" />
+                            <h4>View in 3d</h4>
+                        </div>
+                    </div>
+                </AutoplaySlider>
+            </section>
 
+            <section id="card1">
+                <div className="bg-text">
+                    <h1>Trible</h1>
+                </div>
+                <div className="container">
+                    <div className="row justify-content-center align-items-center">
+                        <div className="col-lg-6">
+                            <h3>Customise</h3>
+                            <h1>Get country specific specs</h1>
+                            <div className="btns">
+                                <div className="hex-btn mt-5">
+                                    <img src={hex} alt="hex" />
+                                    <h4>View models</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <img src={cycle1} alt="cycle" className="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </section>
             <Footer />
         </>
     );
