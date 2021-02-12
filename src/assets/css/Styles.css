@@ -85,7 +85,8 @@ p {
 .navbar {
   font-family: "Gotham";
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   /* color: #000; */
 }
@@ -179,7 +180,7 @@ p {
   margin-bottom: 0;
 }
 
-#card1 {
+.hero-card {
   background: #fff;
   height: 100vh;
   display: flex;
@@ -187,22 +188,23 @@ p {
   font-family: "Roboto", sans-serif;
 }
 
-#card1 .bg-text {
+.hero-card .bg-text {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-#card1 .bg-text h1 {
+.hero-card .bg-text h1 {
   font-size: 28vw;
   /* color: #e8e8e8; */
   color: #3bb1b1;
   opacity: 0.1;
   line-height: 90%;
   text-align: center;
+  white-space: nowrap;
 }
 
-#card1 h3 {
+.hero-card h3 {
   color: #3bb1b1;
   text-transform: uppercase;
   font-weight: 500;
@@ -211,7 +213,7 @@ p {
   letter-spacing: 0.12rem;
 }
 
-#card1 h1 {
+.hero-card h1 {
   font-size: 65px;
   font-weight: 700;
   text-transform: uppercase;
@@ -219,22 +221,73 @@ p {
   line-height: 74px;
 }
 
-#card1 .hex-btn {
+.hero-card .hex-btn {
   display: flex;
   align-items: center;
 }
 
-#card1 .hex-btn img {
+.hero-card .hex-btn img {
   max-width: 60px;
 }
 
-#card1 .hex-btn h4 {
+.hero-card .hex-btn h4 {
   font-size: 14px;
   letter-spacing: 2px;
   margin-bottom: 0;
   margin-left: 10px;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+/* CARD 1 */
+#card1 {
+  background: #fff;
+  transition: all 0.4s linear;
+}
+
+#card1.bg-black {
+  background-color: #000;
+}
+
+#card1 .bg-text h1 {
+  /* color: #e8e8e8; */
+  color: #3bb1b1;
+}
+
+#card1 h3 {
+  color: #3bb1b1;
+}
+
+#card1 h1 {
+  color: #202020;
+}
+
+/* CARD 2 */
+#card2 {
+  background: #fff;
+  transition: all 0.4s linear;
+}
+
+#card2.bg-black {
+  background-color: #000;
+}
+
+#card2 .bg-text h1 {
+  /* color: #e8e8e8; */
+  color: #dd3549;
+  opacity: 0.3;
+}
+
+#card2 h3 {
+  color: #dd3549;
+}
+
+#card2 h1 {
+  color: #fff;
+}
+
+#card2 h4 {
+  color: white;
 }
 
 /* ABOUT PAGE */

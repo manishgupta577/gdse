@@ -1,4 +1,6 @@
 import React from "react";
+import { Controller, Scene } from "react-scrollmagic";
+
 
 import Header from "../components/Header";
 import Button from "../components/Button";
@@ -9,8 +11,10 @@ import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 
 import cycle1 from "../assets/img/cycle1.png";
+import cycle2 from "../assets/img/cycle2.png";
 import _3dbtn from "../assets/img/3dbtn.svg";
-import hex from "../assets/img/hex.svg";
+import hexblack from "../assets/img/hexblack.svg";
+import hexwhite from "../assets/img/hexwhite.svg";
 import panel1 from "../assets/img/panel1.jpg";
 // import video from '../assets/img/video.mp4';
 
@@ -41,28 +45,56 @@ const Home = () => {
                 </AutoplaySlider>
             </section>
 
-            <section id="card1">
-                <div className="bg-text">
-                    <h1>Trible</h1>
-                </div>
-                <div className="container">
-                    <div className="row justify-content-center align-items-center">
-                        <div className="col-lg-6">
-                            <h3>Customise</h3>
-                            <h1>Get country specific specs</h1>
-                            <div className="btns">
-                                <div className="hex-btn mt-5">
-                                    <img src={hex} alt="hex" />
-                                    <h4>View models</h4>
+            <Controller>
+                <Scene triggerElement="#card2" classToggle="bg-black">
+                    <section id="card1" className="hero-card">
+                        <div className="bg-text">
+                            <h1>Trible</h1>
+                        </div>
+                        <div className="container">
+                            <div className="row justify-content-center align-items-center">
+                                <div className="col-lg-6">
+                                    <h3>Customise</h3>
+                                    <h1>Get country specific specs</h1>
+                                    <div className="btns">
+                                        <div className="hex-btn mt-5">
+                                            <img src={hexblack} alt="hex" />
+                                            <h4>View models</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <img src={cycle1} alt="cycle" className="img-fluid" />
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
-                            <img src={cycle1} alt="cycle" className="img-fluid" />
+                    </section>
+                </Scene>
+                <Scene classToggle="bg-black">
+                    <section id="card2" className="hero-card">
+                        <div className="bg-text">
+                            <h1>No. 1</h1>
                         </div>
-                    </div>
-                </div>
-            </section>
+                        <div className="container">
+                            <div className="row justify-content-center align-items-center">
+                                <div className="col-lg-6">
+                                    <img src={cycle2} alt="cycle" className="img-fluid" />
+                                </div>
+                                <div className="col-lg-6">
+                                    <h3>World class</h3>
+                                    <h1>After sale service</h1>
+                                    <div className="btns">
+                                        <div className="hex-btn mt-5">
+                                            <img src={hexwhite} alt="hex" />
+                                            <h4>View models</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </Scene>
+            </Controller>
             <Footer />
         </>
     );
