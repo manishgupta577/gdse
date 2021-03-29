@@ -2,7 +2,7 @@
 @import url("../fonts/Gotham/stylesheet.css");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
-
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
 :root {
   --white: #fff;
   --black: #000;
@@ -189,45 +189,5 @@ p {
 /* FOOTER */
 #footer {
   background-color: #1e1e1e;
-  padding: 80px 0;
-}
-
-#footer .links {
-  margin-top: 30px;
-}
-
-#footer .links a {
-  text-decoration: none;
-  font-size: 15px;
-  color: #eee;
-}
-
-#footer .links a:hover {
-  color: #717171;
-}
-
-#footer h1 {
-  font-size: 30px;
-  font-weight: 400;
-  color: #c6c3be;
-}
-
-#footer p {
-  font-size: 12px;
-  font-weight: 400;
-  margin-top: 40px;
-  color: #717171;
-}
-
-#footer .social object {
-  margin-right: 10px;
-  cursor: pointer !important;
-  border-radius: 50%;
-  filter: invert(99%) sepia(1%) saturate(2072%) hue-rotate(75deg)
-    brightness(113%) contrast(100%);
-}
-
-#footer .social object:hover {
-  filter: invert(9%) sepia(97%) saturate(5472%) hue-rotate(243deg)
-    brightness(116%) contrast(136%);
+  padding: 100px 0;
 }

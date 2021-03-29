@@ -2,40 +2,74 @@ import React from "react";
 import '../assets/css/Home.css';
 import logoWhite from "../assets/img/logowhite.png";
 
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
 
-import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from "react-awesome-slider/dist/autoplay";
-import "react-awesome-slider/dist/styles.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination, Autoplay, EffectFade } from 'swiper/core';
+import 'swiper/swiper.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/effect-fade/effect-fade.scss';
+
 
 import heroInfo1 from '../assets/img/cycles/heroInfo1.png'
 import heroInfo2 from '../assets/img/cycles/heroInfo2.png'
 import heroInfo3 from '../assets/img/cycles/heroInfo3.png'
 
-import typeMountain from '../assets/img/cycles/typeMountain.jpg'
-import typeFoldable from '../assets/img/cycles/typeFoldable.jpg'
-import typeCity from '../assets/img/cycles/typeCity.jpg'
-import typeDelivery from '../assets/img/cycles/typeDelivery.jpg'
+// import typeMountain from '../assets/img/cycles/typeMountain.jpg'
+// import typeFoldable from '../assets/img/cycles/typeFoldable.jpg'
+// import typeCity from '../assets/img/cycles/typeCity.jpg'
+// import typeDelivery from '../assets/img/cycles/typeDelivery.jpg'
+SwiperCore.use([Pagination, Autoplay, EffectFade]);
 
-
-import _3dbtn from "../assets/img/designs/3dbtn.svg";
-
-const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Home = () => {
     return (
         <>
-            <section id="home-hero" className="pan-background d-flex align-items-center">
-                <div className="container">
-                    <h1 className="white">Award Winning <br /> <span className="red">E-Bike</span> Manufacturer</h1>
-                    <h2 className="white">12000 Sq. Ft. of manufacturing facility, World class Anti Dumping solution.</h2>
-                    <div className="d-block mt-5">
-                        <Button text="Products" type="solid" className="mr-3" />
-                        <Button text="Virtual tour" type="border" border="red" />
-                    </div>
-                </div>
+            <section id="home">
+                <Swiper
+                    loop
+                    autoplay
+                    effect="fade"
+                    pagination={{ clickable: true }}>
+                    <SwiperSlide>
+                        <section id="home-hero" className="pan-background d-flex align-items-center">
+                            <div className="container">
+                                <h1 className="white">Award Winning <br /> <span className="red">E-Bike</span> Manufacturer</h1>
+                                <h2 className="white">12000 Sq. Ft. of manufacturing facility, World class Anti Dumping solution.</h2>
+                                <div className="d-block mt-5">
+                                    <Button text="Products" type="solid" className="mr-3" />
+                                    <Button text="Virtual tour" type="border" border="red" />
+                                </div>
+                            </div>
+                        </section>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <section id="home-hero" className="pan-background d-flex align-items-center">
+                            <div className="container">
+                                <h1 className="white">Award Winning <br /> <span className="green">E-Bike</span> Manufacturer</h1>
+                                <h2 className="white">12000 Sq. Ft. of manufacturing facility, World class Anti Dumping solution.</h2>
+                                <div className="d-block mt-5">
+                                    <Button text="Products" type="solid" className="mr-3" />
+                                    <Button text="Virtual tour" type="border" border="green" />
+                                </div>
+                            </div>
+                        </section>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <section id="home-hero" className="pan-background d-flex align-items-center">
+                            <div className="container">
+                                <h1 className="white">Award Winning <br /> <span className="orange">E-Bike</span> Manufacturer</h1>
+                                <h2 className="white">12000 Sq. Ft. of manufacturing facility, World class Anti Dumping solution.</h2>
+                                <div className="d-block mt-5">
+                                    <Button text="Products" type="solid" className="mr-3" />
+                                    <Button text="Virtual tour" type="border" border="orange" />
+                                </div>
+                            </div>
+                        </section>
+                    </SwiperSlide>
+                </Swiper>
             </section>
 
             <section id="home-info1">
@@ -95,42 +129,48 @@ const Home = () => {
                         <h1 className="white mr-3 mb-0">More with</h1>
                         <img src={logoWhite} alt="Logo" />
                     </div>
-                    <div className="row justify-content-center align-items-center">
-                        <div className="col-lg-4">
-                            <div className="mx-3 mb-5">
-                                <div className="home-types-box mountain-type d-flex flex-column justify-content-between">
-                                    <h1 className="white">Mountain bike</h1>
-                                    <Button text="Discover" type="solid" isDark="dark" />
-                                </div>
+                    <Swiper
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        loop
+                        autoplay
+                        breakpoints={{
+                            768: {
+                                slidesPerView: 2,
+                            },
+                            992: {
+                                slidesPerView: 3,
+                            },
+                        }}
+                        pagination={{ clickable: true }}
+                    >
+                        <SwiperSlide>
+                            <div className="home-types-box mountain-type d-flex flex-column justify-content-between">
+                                <h2 className="white">Mountain bike</h2>
+                                <Button text="Discover" type="solid" isDark="dark" />
                             </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="mx-3 mb-5">
-                                <div className="home-types-box mountain-type d-flex flex-column justify-content-between">
-                                    <h1 className="white">Mountain bike</h1>
-                                    <Button text="Discover" type="solid" isDark="dark" />
-                                </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="home-types-box foldable-type d-flex flex-column justify-content-between">
+                                <h2 className="white">Foldable bike</h2>
+                                <Button text="Discover" type="solid" isDark="dark" />
                             </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="mx-3 mb-5">
-                                <div className="home-types-box mountain-type d-flex flex-column justify-content-between">
-                                    <h1 className="white">Mountain bike</h1>
-                                    <Button text="Discover" type="solid" isDark="dark" />
-                                </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="home-types-box city-type d-flex flex-column justify-content-between">
+                                <h2 className="white">City bike</h2>
+                                <Button text="Discover" type="solid" isDark="dark" />
                             </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="mx-3 mb-5">
-                                <div className="home-types-box mountain-type d-flex flex-column justify-content-between">
-                                    <h1 className="white">Mountain bike</h1>
-                                    <Button text="Discover" type="solid" isDark="dark" />
-                                </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="home-types-box delivery-type d-flex flex-column justify-content-between">
+                                <h2 className="white">Delivery bike</h2>
+                                <Button text="Discover" type="solid" isDark="dark" />
                             </div>
-                        </div>
-                    </div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
-            </section>
+            </section >
 
             <Footer />
         </>
