@@ -1,5 +1,6 @@
 import React from "react";
 import { Controller, Scene } from "react-scrollmagic";
+import { Tween, Timeline } from 'react-gsap';
 
 
 import Header from "../components/Header";
@@ -45,56 +46,69 @@ const Home = () => {
                 </AutoplaySlider>
             </section>
 
+
             <Controller>
-                <Scene triggerElement="#card2" classToggle="bg-black">
-                    <section id="card1" className="hero-card">
-                        <div className="bg-text">
-                            <h1>Trible</h1>
-                        </div>
-                        <div className="container">
-                            <div className="row justify-content-center align-items-center">
-                                <div className="col-lg-6">
-                                    <h3>Customise</h3>
-                                    <h1>Get country specific specs</h1>
-                                    <div className="btns">
-                                        <div className="hex-btn mt-5">
-                                            <img src={hexblack} alt="hex" />
-                                            <h4>View models</h4>
+                <Scene
+                    triggerHook="onLeave"
+                    duration="200%"
+                    pin
+                >
+                    <Timeline
+                        wrapper={<div id="pinContainer" />}
+                    >
+                        <section id="card1" className="hero-card">
+                            <div className="bg-text">
+                                <h1>Trible</h1>
+                            </div>
+                            <div className="container">
+                                <div className="row justify-content-center align-items-center">
+                                    <div className="col-lg-6">
+                                        <h3>Customise</h3>
+                                        <h1>Get country specific specs</h1>
+                                        <div className="btns">
+                                            <div className="hex-btn mt-5">
+                                                <img src={hexblack} alt="hex" />
+                                                <h4>View models</h4>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <img src={cycle1} alt="cycle" className="img-fluid" />
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </Scene>
-                <Scene classToggle="bg-black">
-                    <section id="card2" className="hero-card">
-                        <div className="bg-text">
-                            <h1>No. 1</h1>
-                        </div>
-                        <div className="container">
-                            <div className="row justify-content-center align-items-center">
-                                <div className="col-lg-6">
-                                    <img src={cycle2} alt="cycle" className="img-fluid" />
-                                </div>
-                                <div className="col-lg-6">
-                                    <h3>World class</h3>
-                                    <h1>After sale service</h1>
-                                    <div className="btns">
-                                        <div className="hex-btn mt-5">
-                                            <img src={hexwhite} alt="hex" />
-                                            <h4>View models</h4>
-                                        </div>
+                                    <div className="col-lg-6">
+                                        <img src={cycle1} alt="cycle" className="img-fluid" />
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                        <Tween
+                            from={{ y: '100%' }}
+                            to={{ y: '0%' }}
+                        >
+                            <section id="card2" className="hero-card">
+                                <div className="bg-text">
+                                    <h1>No. 1</h1>
+                                </div>
+                                <div className="container">
+                                    <div className="row justify-content-center align-items-center">
+                                        <div className="col-lg-6">
+                                            <img src={cycle2} alt="cycle" className="img-fluid" />
+                                        </div>
+                                        <div className="col-lg-6">
+                                            <h3>World class</h3>
+                                            <h1>After sale service</h1>
+                                            <div className="btns">
+                                                <div className="hex-btn mt-5">
+                                                    <img src={hexblack} alt="hex" />
+                                                    <h4>View models</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </Tween>
+                    </Timeline>
                 </Scene>
             </Controller>
+
             <Footer />
         </>
     );

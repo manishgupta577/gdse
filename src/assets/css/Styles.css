@@ -181,7 +181,6 @@ p {
 }
 
 .hero-card {
-  background: #fff;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -196,8 +195,6 @@ p {
 
 .hero-card .bg-text h1 {
   font-size: 28vw;
-  /* color: #e8e8e8; */
-  color: #3bb1b1;
   opacity: 0.1;
   line-height: 90%;
   text-align: center;
@@ -205,7 +202,6 @@ p {
 }
 
 .hero-card h3 {
-  color: #3bb1b1;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 30px;
@@ -217,7 +213,6 @@ p {
   font-size: 65px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #202020;
   line-height: 74px;
 }
 
@@ -242,7 +237,7 @@ p {
 /* CARD 1 */
 #card1 {
   background: #fff;
-  transition: all 0.4s linear;
+  /* transition: all 0.4s linear; */
 }
 
 #card1.bg-black {
@@ -250,8 +245,9 @@ p {
 }
 
 #card1 .bg-text h1 {
-  /* color: #e8e8e8; */
-  color: #3bb1b1;
+  color: #e8e8e8;
+  /* color: #3bb1b1; */
+  opacity: 1;
 }
 
 #card1 h3 {
@@ -265,7 +261,7 @@ p {
 /* CARD 2 */
 #card2 {
   background: #fff;
-  transition: all 0.4s linear;
+  /* transition: all 0.4s linear; */
 }
 
 #card2.bg-black {
@@ -283,11 +279,24 @@ p {
 }
 
 #card2 h1 {
-  color: #fff;
+  color: #000;
 }
 
 #card2 h4 {
-  color: white;
+  color: #000;
+}
+
+#pinContainer {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#pinContainer .hero-card {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  text-align: center;
 }
 
 /* ABOUT PAGE */
