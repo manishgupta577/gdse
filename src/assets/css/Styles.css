@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;900&display=swap");
+@import url("../fonts/Gotham/stylesheet.css");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+:root {
+  --white: #fff;
+  --black: #000;
+  --red: #dd3549;
+  --grey: #121212;
+  --green: #3bb1b1;
+  --orange: #ff961b;
+  --font1: "Sen", sans-serif;
+  --font2: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font1);
+}
+
+h4,
+h5,
+h6,
+p {
+  font-family: var(--font2);
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.625rem;
+}
+
+h4 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.pan-background {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.black {
+  color: var(--black);
+}
+
+.white {
+  color: var(--white);
+}
+
+.red {
+  color: var(--red);
+}
+
+.green {
+  color: var(--green);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+/* BUTTON */
+.g-btn {
+  display: inline-block;
+  border: 2px solid var(--grey);
+  width: fit-content;
+  border-radius: 40px;
+  padding: 10px 32px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: all 0.1s linear;
+  background-color: #1e1e1e;
+  color: var(--white);
+}
+
+.g-btn:hover {
+  background: var(--white);
+  border-color: var(--white);
+  color: #1e1e1e;
+}
+
+.dark {
+  background: var(--white);
+  border-color: var(--white);
+  color: #1e1e1e;
+}
+
+.dark:hover {
+  border-color: #1e1e1e;
+  background-color: #1e1e1e;
+  color: #f6f6f6;
+}
+
+.border-btn {
+  background-color: transparent;
+}
+
+.border-btn.white-border {
+  border: 2px solid var(--white);
+}
+
+.border-btn.red-border {
+  border: 2px solid var(--red);
+}
+
+.border-btn.green-border {
+  border: 2px solid var(--green);
+}
+
+.border-btn.orange-border {
+  border: 2px solid var(--orange);
+}
+
+.border-btn:hover {
+  border: 2px solid var(--white);
+}
+
+/* NAVBAR */
+#navbar {
+  top: 0;
+  background: rgba(255, 255, 255, 0);
+  transition: top 0.3s, background 0.3s;
+  z-index: 1000;
+}
+
+.navbar {
+  font-family: "Sen", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /* color: #000; */
+}
+
+.navbar .nav-item .nav-link {
+  color: var(--white);
+  padding: 0;
+  transition: all 0.1s linear;
+}
+
+.navbar .nav-item .nav-link:hover {
+  color: var(--white);
+  opacity: 0.6;
+}
+
+.navbar-brand {
+  color: #fc8804 !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.custom-toggler.navbar-toggler:focus {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+/* FOOTER */
+#footer {
+  background-color: #1e1e1e;
+  padding: 100px 0;
+}
