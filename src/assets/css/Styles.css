@@ -6,10 +6,13 @@
 :root {
   --white: #fff;
   --black: #000;
-  --red: #dd3549;
   --grey: #121212;
+  --red: #dd3549;
   --green: #3bb1b1;
   --orange: #ff961b;
+  --redBg: rgba(221, 53, 73, 0.2);
+  --greenBg: rgba(59, 177, 177, 0.2);
+  --orange: rgba(255, 150, 27, 0.2);
   --font1: "Sen", sans-serif;
   --font2: "Roboto", sans-serif;
 }

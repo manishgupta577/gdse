@@ -4,7 +4,6 @@ import BgText from '../components/BgText'
 import Button from '../components/Button'
 
 import aboutText from '../assets/img/backgrounds/aboutText.jpg'
-import aboutText from '../assets/img/backgrounds/aboutText.jpg'
 
 function About() {
     return (
@@ -12,8 +11,8 @@ function About() {
             <section id="about-hero" className="pan-background d-flex align-items-center">
                 <BgText text="About Us" color="red" />
                 <div className="container">
-                    <h2 className="red text-capitalize">Introduction about</h2>
-                    <h1>GDSE company</h1>
+                    <h5 className="red">Introduction about</h5>
+                    <h4>GDSE company</h4>
                     <Button text="Products" type="solid" className="mt-3" />
                 </div>
             </section>

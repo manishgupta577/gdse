@@ -6,17 +6,17 @@ import logoWhite from "../assets/img/logowhite.png";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
 
+import heroInfo1 from "../assets/img/cycles/heroInfo1.png";
+import heroInfo2 from "../assets/img/cycles/heroInfo2.png";
+import heroInfo3 from "../assets/img/cycles/heroInfo3.png";
+// import TextVice from "react-text-vice";
+import BgText from "../components/BgText";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Autoplay, EffectFade } from "swiper/core";
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/effect-fade/effect-fade.scss";
-
-import heroInfo1 from "../assets/img/cycles/heroInfo1.png";
-import heroInfo2 from "../assets/img/cycles/heroInfo2.png";
-import heroInfo3 from "../assets/img/cycles/heroInfo3.png";
-import TextVice from "react-text-vice";
-import BgText from "../components/BgText";
 
 SwiperCore.use([Pagination, Autoplay, EffectFade]);
 
@@ -84,7 +84,6 @@ const Home = () => {
                     </SwiperSlide>
                 </Swiper>
             </section>
-
 
             <section id="home-info1">
                 <BgText text="Trible" color="green" />
