@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.8.3",
     "aos": "^2.3.4",
     "bootstrap": "^4.6.0",
+    "core-js": "^3.9.1",
     "gsap": "^3.6.1",
     "jquery": "^3.6.0",
     "node-sass": "^5.0.0",
@@ -17,7 +18,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-scrollmagic": "^2.3.0",
-    "react-textfit": "^1.1.1",
+    "react-text-vice": "^1.2.0",
     "swiper": "^6.5.2",
     "web-vitals": "^1.1.1"
   },

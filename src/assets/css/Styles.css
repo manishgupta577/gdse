@@ -29,6 +29,7 @@ p {
 
 h1 {
   font-size: 2.25rem;
+  font-weight: 700;
 }
 
 h2 {
@@ -54,6 +55,7 @@ p {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  z-index: 1000;
 }
 
 .pan-background {
@@ -82,6 +84,30 @@ p {
 .orange {
   color: var(--orange);
 }
+
+.bg-text-container {
+  z-index: 1;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-text-container h6 {
+  font-size: calc(100px + (100 – 50) * ((100vw – 400px) / (800 – 400)));
+  font-family: var(--font2);
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0.2;
+  line-height: calc(120px + (100 – 50) * ((100vw – 400px) / (800 – 400)));
+}
+
+/* @media screen and (max-width: 550px) {
+  .bg-text-container {
+    white-space: wrap;
+  }
+} */
 
 /* BUTTON */
 .g-btn {
@@ -120,6 +146,11 @@ p {
 
 .border-btn {
   background-color: transparent;
+  color: var(--black);
+}
+
+.border-btn.dark {
+  color: var(--white);
 }
 
 .border-btn.white-border {

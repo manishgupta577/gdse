@@ -20,6 +20,8 @@
 #home-info2,
 #home-info3 {
   padding: 100px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 #home-types {

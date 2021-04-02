@@ -10,9 +10,8 @@ const Button = (props) => {
   } else if (props.type === "border") {
     return (
       <div
-        className={`g-btn border-btn ${props.border}-border ${
-          props.isDark ? "dark" : ""
-        } ${props.className}`}
+        className={`g-btn border-btn ${props.border}-border ${props.isDark ? "dark" : ""
+          } ${props.className}`}
       >
         {props.text}
       </div>

@@ -67,8 +67,8 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6">
               <div className="d-flex flex-column text-center">
                 <h2 className="text-capitalize white mb-4">Let's connect</h2>
-                <a href="">info@gdsebike.com</a>
-                <a href="">0086-15975428800</a>
+                <a href="/">info@gdsebike.com</a>
+                <a href="/">0086-15975428800</a>
               </div>
             </div>
 

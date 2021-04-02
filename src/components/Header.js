@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import logoWhite from "../assets/img/logowhite.png";
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,7 @@ const Header = () => {
     <div id="navbar" className="navbar fixed-top navbar-expand-lg navbar-light">
       <div className="container">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             <img src={logoWhite} alt="Logo" />
           </a>
           <button
