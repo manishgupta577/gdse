@@ -1,9 +1,12 @@
 import React from "react";
 
 function BgText(props) {
+    let len = props.text.length;
+    console.log(len);
+    let fz = len < 6 ? 25 : 38.3714 - 2.25714 * len;
     return <div>
         <div className="bg-text-container">
-            <h6 className={`${props.color}`}>{props.text}</h6>
+            <h6 style={{ fontSize: `${fz}vw` }} className={`${props.color}`}>{props.text}</h6>
         </div>
     </div >;
 }

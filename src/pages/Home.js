@@ -109,7 +109,7 @@ const Home = () => {
             </section>
 
             <section id="home-info2">
-                <BgText text="No .1" color="red" />
+                <BgText text="No.1" color="red" />
                 <div className="container">
                     <div className="row justify-content-center align-items-center">
                         <div className="col-lg-6">
@@ -200,6 +200,19 @@ const Home = () => {
                             </div>
                         </SwiperSlide>
                     </Swiper>
+                </div>
+            </section>
+
+            <section id="guide" className="pan-background">
+                <div className="container">
+                    <h1 className="orange"><span className="green">Guide</span> to buy from <span className="red">China</span></h1>
+                    <p>Get your free E-Guide on how to avoid any errors and have a splendid experience buying E-Bikes from China.</p>
+                    <Button
+                        text="Download Now"
+                        type="border"
+                        border="red"
+                        className="mt-3"
+                    />
                 </div>
             </section>
 

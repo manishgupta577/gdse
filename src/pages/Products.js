@@ -13,14 +13,17 @@ import SwiperCore, { Pagination, Autoplay, EffectFade } from "swiper/core";
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/effect-fade/effect-fade.scss";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 SwiperCore.use([Pagination, Autoplay, EffectFade]);
 
 function Products() {
     return (
         <div>
+            <Header />
             <section id="products-hero" className="pan-background d-flex align-items-center">
-                <BgText text="Trible" color="green" />
+                <BgText text="Explore" color="green" />
                 <div className="container">
                     <div className="row justify-content-center align-items-center">
                         <div className="col-md-6">
@@ -37,7 +40,7 @@ function Products() {
 
             <section id="products-top">
                 <div className="container">
-                    <h1>Top Selling</h1>
+                    <h1 className="mb-5">Top Selling</h1>
                     <Swiper
                         spaceBetween={50}
                         slidesPerView={1}
@@ -116,6 +119,7 @@ function Products() {
                 </div>
             </section>
 
+            <Footer />
         </div>
     )
 }

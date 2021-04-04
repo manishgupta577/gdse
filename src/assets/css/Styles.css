@@ -12,9 +12,26 @@
   --orange: #ff961b;
   --redBg: rgba(221, 53, 73, 0.2);
   --greenBg: rgba(59, 177, 177, 0.2);
-  --orange: rgba(255, 150, 27, 0.2);
+  --orangeBg: rgba(255, 150, 27, 0.2);
   --font1: "Sen", sans-serif;
   --font2: "Roboto", sans-serif;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
 }
 
 h1,
@@ -98,19 +115,15 @@ p {
 }
 
 .bg-text-container h6 {
-  font-size: calc(100px + (100 – 50) * ((100vw – 400px) / (800 – 400)));
+  /* font-size: calc(100px + (100 – 50) * ((100vw – 400px) / (800 – 400))); 
+  font-size: clamp(3rem, -0.875rem + 28vw, 30rem); */
   font-family: var(--font2);
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   opacity: 0.2;
+  white-space: nowrap;
   line-height: calc(120px + (100 – 50) * ((100vw – 400px) / (800 – 400)));
 }
-
-/* @media screen and (max-width: 550px) {
-  .bg-text-container {
-    white-space: wrap;
-  }
-} */
 
 /* BUTTON */
 .g-btn {
@@ -224,4 +237,25 @@ p {
 #footer {
   background-color: #1e1e1e;
   padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#footer .footer-half {
+  position: absolute;
+  top: 0;
+  height: 110%;
+  left: 0px;
+}
+
+#footer a {
+  color: var(--white);
+}
+
+#footer input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--white);
+  border-radius: 0;
+  color: var(--white);
 }

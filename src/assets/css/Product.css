@@ -1,0 +1,35 @@
+#info-poly {
+  padding: 20px 0;
+}
+
+#info-poly .outside-box {
+  position: relative;
+}
+
+#info-poly h2 {
+  font-family: var(--font2);
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+#info-poly .inside-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#info-text {
+  background: url("../img/backgrounds/guideDownload.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+
+#info-text h1,
+#info-text p {
+  max-width: 500px;
+}
