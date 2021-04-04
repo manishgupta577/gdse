@@ -21,6 +21,7 @@ SwiperCore.use([Pagination, Autoplay, EffectFade]);
 function Product() {
     return (
         <div>
+            <Header theme="black" />
             <section
                 id="productho-hero"
                 className="pan-background d-flex align-items-center"
@@ -86,7 +87,7 @@ function Product() {
                             <div className="outside-box">
                                 <img src={blackPoly} alt="Poly" className="img-fluid" />
                                 <div className="inside-text">
-                                    <h2 className="text-uppercase">6061</h2>
+                                    <h2 className="text-uppercase">21 Kg</h2>
                                 </div>
                             </div>
                             <h2 className="mt-3">WEIGHT</h2>
@@ -95,7 +96,7 @@ function Product() {
                             <div className="outside-box">
                                 <img src={blackPoly} alt="Poly" className="img-fluid" />
                                 <div className="inside-text">
-                                    <h2 className="text-uppercase">6061</h2>
+                                    <h2 className="text-uppercase">LCD Screen</h2>
                                 </div>
                             </div>
                             <h2 className="mt-3">DISPLAY</h2>
@@ -142,6 +143,66 @@ function Product() {
                         }}
                         pagination={{ clickable: true }}
                     >
+                        <SwiperSlide>
+                            <div className="products-top-box py-4 px-4 d-flex flex-column justify-content-center">
+                                <img src={triUp} alt="TriUp" className="triUp" />
+                                <img src={triDown} alt="TriDown" className="triDown" />
+                                <img src={heroInfo1} alt="Cycle" className="img-fluid" />
+                                <h5 className="text-center">Trible 2</h5>
+
+                                <Button text="Discover" type="solid" className="mx-auto mt-4" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="products-top-box py-4 px-4 d-flex flex-column justify-content-center">
+                                <img src={triUp} alt="TriUp" className="triUp" />
+                                <img src={triDown} alt="TriDown" className="triDown" />
+                                <img src={heroInfo1} alt="Cycle" className="img-fluid" />
+                                <h5 className="text-center">Trible 2</h5>
+
+                                <Button text="Discover" type="solid" className="mx-auto mt-4" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="products-top-box py-4 px-4 d-flex flex-column justify-content-center">
+                                <img src={triUp} alt="TriUp" className="triUp" />
+                                <img src={triDown} alt="TriDown" className="triDown" />
+                                <img src={heroInfo1} alt="Cycle" className="img-fluid" />
+                                <h5 className="text-center">Trible 2</h5>
+
+                                <Button text="Discover" type="solid" className="mx-auto mt-4" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="products-top-box py-4 px-4 d-flex flex-column justify-content-center">
+                                <img src={triUp} alt="TriUp" className="triUp" />
+                                <img src={triDown} alt="TriDown" className="triDown" />
+                                <img src={heroInfo1} alt="Cycle" className="img-fluid" />
+                                <h5 className="text-center">Trible 2</h5>
+
+                                <Button text="Discover" type="solid" className="mx-auto mt-4" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="products-top-box py-4 px-4 d-flex flex-column justify-content-center">
+                                <img src={triUp} alt="TriUp" className="triUp" />
+                                <img src={triDown} alt="TriDown" className="triDown" />
+                                <img src={heroInfo1} alt="Cycle" className="img-fluid" />
+                                <h5 className="text-center">Trible 2</h5>
+
+                                <Button text="Discover" type="solid" className="mx-auto mt-4" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="products-top-box py-4 px-4 d-flex flex-column justify-content-center">
+                                <img src={triUp} alt="TriUp" className="triUp" />
+                                <img src={triDown} alt="TriDown" className="triDown" />
+                                <img src={heroInfo1} alt="Cycle" className="img-fluid" />
+                                <h5 className="text-center">Trible 2</h5>
+
+                                <Button text="Discover" type="solid" className="mx-auto mt-4" />
+                            </div>
+                        </SwiperSlide>
                         <SwiperSlide>
                             <div className="products-top-box py-4 px-4 d-flex flex-column justify-content-center">
                                 <img src={triUp} alt="TriUp" className="triUp" />

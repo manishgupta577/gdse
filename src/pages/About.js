@@ -10,10 +10,12 @@ import adityaOza from '../assets/img/team/adityaOza.jpg'
 
 import aboutText from '../assets/img/backgrounds/aboutText.jpg'
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 function About() {
     return (
         <div>
+            <Header theme="black" />
             <section id="about-hero" className="pan-background d-flex align-items-center">
                 <BgText text="About" color="red" />
                 <div className="container">

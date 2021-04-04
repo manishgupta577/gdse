@@ -191,7 +191,6 @@ p {
 
 /* NAVBAR */
 #navbar {
-  top: 0;
   background: rgba(255, 255, 255, 0);
   transition: top 0.3s, background 0.3s;
   z-index: 1000;
@@ -200,7 +199,7 @@ p {
 .navbar {
   font-family: "Sen", sans-serif;
   font-weight: 500;
-  font-size: 12px;
+  /* font-size: 12px; */
   letter-spacing: 2px;
   text-transform: uppercase;
   /* color: #000; */
@@ -208,6 +207,18 @@ p {
 
 .navbar .nav-item .nav-link {
   color: var(--white);
+  padding: 0;
+  transition: all 0.1s linear;
+}
+
+.navbar .nav-item .nav-link.black {
+  color: var(--black);
+  padding: 0;
+  transition: all 0.1s linear;
+}
+
+.navbar .nav-item .nav-link.black:hover {
+  color: var(--black);
   padding: 0;
   transition: all 0.1s linear;
 }

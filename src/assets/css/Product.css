@@ -33,3 +33,25 @@
 #info-text p {
   max-width: 500px;
 }
+
+#products-top .swiper-wrapper {
+  padding-bottom: 50px;
+}
+
+#products-top
+  .swiper-container-horizontal
+  > #products-top
+  .swiper-pagination-bullets,
+#products-top .swiper-pagination-custom,
+#products-top .swiper-pagination-fraction {
+  bottom: 0px !important;
+}
+
+#products-top .swiper-pagination-bullet {
+  background: var(--black);
+  opacity: 1;
+}
+
+#products-top .swiper-pagination-bullet-active {
+  background: var(--red);
+}

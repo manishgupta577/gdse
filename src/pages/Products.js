@@ -21,7 +21,7 @@ SwiperCore.use([Pagination, Autoplay, EffectFade]);
 function Products() {
     return (
         <div>
-            <Header />
+            <Header theme="black" />
             <section id="products-hero" className="pan-background d-flex align-items-center">
                 <BgText text="Explore" color="green" />
                 <div className="container">

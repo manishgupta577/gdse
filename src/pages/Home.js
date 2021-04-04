@@ -17,12 +17,14 @@ import SwiperCore, { Pagination, Autoplay, EffectFade } from "swiper/core";
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/effect-fade/effect-fade.scss";
+import Header from "../components/Header";
 
 SwiperCore.use([Pagination, Autoplay, EffectFade]);
 
 const Home = () => {
     return (
         <>
+            <Header />
             <section id="home">
                 <Swiper loop autoplay effect="fade" pagination={{ clickable: true }}>
                     <SwiperSlide>

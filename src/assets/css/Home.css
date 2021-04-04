@@ -3,6 +3,10 @@
     url("../img/backgrounds/homeHero1.jpg") center / cover no-repeat;
 }
 
+#home {
+  margin-top: -84px;
+}
+
 #home .swiper-pagination-bullet {
   background: var(--white);
   opacity: 1;
