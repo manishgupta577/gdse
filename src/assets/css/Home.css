@@ -41,7 +41,7 @@
   height: 400px;
 }
 
-#home-types .home-types-box.mountain-type {
+/* #home-types .home-types-box.mountain-type {
   background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     url("../img/cycles/typeMountain.jpg") center / cover no-repeat;
 }
@@ -59,7 +59,7 @@
 #home-types .home-types-box.delivery-type {
   background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     url("../img/cycles/typeDelivery.jpg") center / cover no-repeat;
-}
+} */
 
 #home-types .swiper-wrapper {
   padding-bottom: 50px;

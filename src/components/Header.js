@@ -35,9 +35,7 @@ const Header = (props) => {
                 </Link>
               </li>
               <li className="nav-item ml-5">
-                <Link className={`nav-link ${props.theme}`} to="/products">
-                  Products
-                </Link>
+                <Link className={`nav-link ${props.theme}`}>Products</Link>
               </li>
               <li className="nav-item ml-5">
                 <Link className={`nav-link ${props.theme}`} to="/about">
