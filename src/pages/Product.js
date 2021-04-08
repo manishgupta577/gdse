@@ -9,14 +9,15 @@ import triDown from "../assets/img/designs/triDown.svg";
 import blackPoly from '../assets/img/designs/productBlackPoly.svg'
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Autoplay, EffectFade } from "swiper/core";
+import SwiperCore, { Navigation, Pagination, Autoplay, EffectFade } from "swiper/core";
 import "swiper/swiper.scss";
+import 'swiper/components/navigation/navigation.scss';
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/effect-fade/effect-fade.scss";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-SwiperCore.use([Pagination, Autoplay, EffectFade]);
+SwiperCore.use([Navigation, Pagination, Autoplay, EffectFade]);
 
 function Product() {
     return (
@@ -122,6 +123,29 @@ function Product() {
                         border="red"
                         className="mt-3"
                     />
+                </div>
+            </section>
+
+            <section id="product-options">
+                <div className="container">
+                    <h2 className="mb-5">Explore Design and Color Options</h2>
+                    <Swiper
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        loop
+                        navigation
+                        autoplay>
+                        <SwiperSlide>
+                            <div className="text-center">
+                                <img src={heroInfo1} alt="Image" className="img-fluid" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="text-center">
+                                <img src={heroInfo1} alt="Image" className="img-fluid" />
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
             </section>
 

@@ -34,6 +34,14 @@
   max-width: 500px;
 }
 
+#product-options {
+  padding: 100px 0;
+}
+
+#product-options img {
+  max-width: 500px;
+}
+
 #products-top .swiper-wrapper {
   padding-bottom: 50px;
 }
