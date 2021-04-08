@@ -89,7 +89,7 @@ function Products(props) {
 
       <section id="products-top">
         <div className="container">
-          <h1 className="mb-5">Top Selling</h1>
+          <h2 className="mb-5">Bikes in this Category</h2>
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
@@ -110,7 +110,7 @@ function Products(props) {
               products.map((product, index) => {
                 return (
                   <SwiperSlide>
-                    <div className="products-top-box py-4 px-4 d-flex flex-column justify-content-center">
+                    <div className="products-top-box py-4 px-4 d-flex flex-column justify-content-between">
                       <img src={triUp} alt="TriUp" className="triUp" />
                       <img src={triDown} alt="TriDown" className="triDown" />
                       <img
@@ -118,15 +118,17 @@ function Products(props) {
                         alt="Cycle"
                         className="img-fluid"
                       />
-                      <h5 className="text-center">{product.name}</h5>
-                      <button
-                        onClick={() =>
-                          history.push(`${props.match.url}/${product.slug}`)
-                        }
-                        className="bg-transparent border-0 mx-auto mt-4"
-                      >
-                        <Button text="Discover" type="solid" />
-                      </button>
+                      <div className="d-flex flex-column justify-content-center">
+                        <h5 className="text-center">{product.name}</h5>
+                        <button
+                          onClick={() =>
+                            history.push(`${props.match.url}/${product.slug}`)
+                          }
+                          className="bg-transparent border-0 mx-auto mt-4"
+                        >
+                          <Button text="Discover" type="solid" />
+                        </button>
+                      </div>
                     </div>
                   </SwiperSlide>
                 );

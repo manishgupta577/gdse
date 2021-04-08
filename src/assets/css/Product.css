@@ -38,8 +38,16 @@
   padding: 100px 0;
 }
 
-#product-options img {
-  max-width: 500px;
+@media screen and (min-width: 992px) {
+  #product-options img {
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #product-options img {
+    max-width: 450px;
+  }
 }
 
 #products-top .swiper-wrapper {
