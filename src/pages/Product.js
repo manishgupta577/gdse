@@ -36,10 +36,6 @@ function Product(props) {
         getProductInfo();
         getProducts();
         getCategories();
-        $("html").bind("mouseleave", function () {
-            openModal();
-            $("html").unbind("mouseleave");
-        });
     }, []);
 
     function openModal() {
