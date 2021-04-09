@@ -92,7 +92,7 @@ function Product(props) {
             {productInfo != undefined && productInfo != null && (
                 <>
                     <section
-                        id="productho-hero"
+                        id="product-hero"
                         className="pan-background d-flex align-items-center"
                     >
                         <BgText text={productInfo.landing_page_bg_text} color="green" />

@@ -1,0 +1,68 @@
+#certifications {
+  padding: 100px 0;
+  position: relative;
+}
+
+#certifications .certificates-logo img {
+  max-width: 80px;
+}
+
+#choose-provide {
+  padding: 100px 0;
+  background-image: url("../img/backgrounds/chooseProvide.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#choose-provide ul {
+  list-style-position: inside;
+}
+
+#choose-service {
+  padding: 100px 0;
+  background-image: url("../img/backgrounds/chooseService.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#choose-service ul {
+  list-style-position: inside;
+}
+
+#choose-service {
+  padding: 100px 0;
+  background-image: url("../img/backgrounds/chooseService.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#choose-service ul {
+  list-style-position: inside;
+}
+
+#choose-service {
+  padding: 100px 0;
+  background-image: url("../img/backgrounds/chooseService.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#choose-service ul {
+  list-style-position: inside;
+}
+
+#choose-help {
+  padding: 100px 0;
+  background-image: url("../img/backgrounds/chooseHelp.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#choose-help ul {
+  list-style-position: inside;
+}
