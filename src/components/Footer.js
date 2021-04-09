@@ -1,11 +1,124 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
 import footerHalf from "../assets/img/designs/footerHalf.png";
+import Modal from "react-modal";
+import $ from "jquery";
 
 const Footer = () => {
+  useEffect(() => {
+    $("html").bind("mouseleave", function () {
+      openModal();
+      $("html").unbind("mouseleave");
+    });
+  }, []);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      outline: "none",
+      minWidth: "20rem",
+      height: "80%",
+      maxHeight: "40rem",
+      minHeight: "20rem",
+      width: "80%",
+      maxWidth: "40rem",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+    },
+  };
+
+  const [modalIsOpen, setIsOpen] = useState(false);
   return (
     <>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+      >
+        <section
+          id="quote-modal"
+          style={{ position: "relative" }}
+          className="h-100 w-100"
+        >
+          <div
+            onClick={closeModal}
+            className="close-btn d-flex align-items-center justify-content-center"
+          >
+            <i class="fas fa-times"></i>
+          </div>
+          <div className="container d-flex align-items-center justify-content-center h-100 flex-column w-100">
+            <h1 className="text-center mb-3">
+              Get a <span className="red">Quote</span>
+            </h1>
+            <form action="" className="w-100">
+              <div className="form-row">
+                <div className="form-group col-12 col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Name"
+                  />
+                </div>
+                <div className="form-group col-12 col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-group col-12 col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Country"
+                  />
+                </div>
+                <div className="form-group col-12 col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Contact Number"
+                  />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-group col-12 col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Company Name"
+                  />
+                </div>
+                <div className="form-group col-12 col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Intrested in Model"
+                  />
+                </div>
+              </div>
+              <div className="form-group d-flex justify-content-center mt-4">
+                <Button text="submit" type="solid" />
+              </div>
+            </form>
+          </div>
+        </section>
+      </Modal>
+
       <section id="footer">
         <img
           src={footerHalf}

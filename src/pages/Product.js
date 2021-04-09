@@ -20,6 +20,7 @@ import Footer from "../components/Footer";
 import axios from "axios";
 import requestUrls from "../constants/requestUrls";
 import { useHistory } from "react-router";
+import $ from "jquery";
 
 SwiperCore.use([Navigation, Pagination, Autoplay, EffectFade]);
 
@@ -35,6 +36,10 @@ function Product(props) {
         getProductInfo();
         getProducts();
         getCategories();
+        $("html").bind("mouseleave", function () {
+            openModal();
+            $("html").unbind("mouseleave");
+        });
     }, []);
 
     function openModal() {
