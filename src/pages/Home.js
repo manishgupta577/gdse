@@ -53,11 +53,11 @@ const Home = (props) => {
           <SwiperSlide>
             <section
               id="home-hero"
-              className="pan-background d-flex align-items-center"
+              className="pan-background d-flex align-items-center home-hero-1"
             >
               <div className="container">
                 <h1 className="white">
-                  Award Winning <br /> <span className="red">E-Bike</span>{" "}
+                  Award Winning <br /> <span className="red">E-Bike</span>
                   Manufacturer
                 </h1>
                 <h2 className="white">
@@ -79,11 +79,11 @@ const Home = (props) => {
           <SwiperSlide>
             <section
               id="home-hero"
-              className="pan-background d-flex align-items-center"
+              className="pan-background d-flex align-items-center home-hero-2"
             >
               <div className="container">
                 <h1 className="white">
-                  Award Winning <br /> <span className="green">E-Bike</span>{" "}
+                  Award Winning <br /> <span className="green">E-Bike</span>
                   Manufacturer
                 </h1>
                 <h2 className="white">
@@ -105,11 +105,63 @@ const Home = (props) => {
           <SwiperSlide>
             <section
               id="home-hero"
-              className="pan-background d-flex align-items-center"
+              className="pan-background d-flex align-items-center home-hero-3"
             >
               <div className="container">
                 <h1 className="white">
-                  Award Winning <br /> <span className="orange">E-Bike</span>{" "}
+                  Award Winning <br /> <span className="orange">E-Bike</span>
+                  Manufacturer
+                </h1>
+                <h2 className="white">
+                  12000 Sq. Ft. of manufacturing facility, World class Anti
+                  Dumping solution.
+                </h2>
+                <div className="d-block mt-5">
+                  <Button text="Products" type="solid" className="mr-3" />
+                  <Button
+                    text="Virtual tour"
+                    isDark="dark"
+                    type="border"
+                    border="orange"
+                  />
+                </div>
+              </div>
+            </section>
+          </SwiperSlide>
+          <SwiperSlide>
+            <section
+              id="home-hero"
+              className="pan-background d-flex align-items-center home-hero-2"
+            >
+              <div className="container">
+                <h1 className="white">
+                  Award Winning <br /> <span className="green">E-Bike</span>
+                  Manufacturer
+                </h1>
+                <h2 className="white">
+                  12000 Sq. Ft. of manufacturing facility, World class Anti
+                  Dumping solution.
+                </h2>
+                <div className="d-block mt-5">
+                  <Button text="Products" type="solid" className="mr-3" />
+                  <Button
+                    text="Virtual tour"
+                    isDark="dark"
+                    type="border"
+                    border="green"
+                  />
+                </div>
+              </div>
+            </section>
+          </SwiperSlide>
+          <SwiperSlide>
+            <section
+              id="home-hero"
+              className="pan-background d-flex align-items-center home-hero-4"
+            >
+              <div className="container">
+                <h1 className="white">
+                  Award Winning <br /> <span className="orange">E-Bike</span>
                   Manufacturer
                 </h1>
                 <h2 className="white">
@@ -221,8 +273,8 @@ const Home = (props) => {
             }}
             pagination={{ clickable: true }}
           >
-            {categories != null &&
-              categories != undefined &&
+            {categories !== null &&
+              categories !== undefined &&
               categories.map((category, index) => {
                 return (
                   <SwiperSlide>
@@ -252,7 +304,7 @@ const Home = (props) => {
       <section id="guide" className="pan-background">
         <div className="container">
           <h1 className="orange">
-            <span className="green">Guide</span> to buy from{" "}
+            <span className="green">Guide</span> to buy from
             <span className="red">China</span>
           </h1>
           <p>

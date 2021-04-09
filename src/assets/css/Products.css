@@ -8,9 +8,26 @@
 
 #products-top .products-top-box {
   height: 450px;
-  background: var(--redBg);
+  /* background: var(--redBg); */
   position: relative;
   border: none;
+}
+
+#products-top .product-top-box-bg-1 {
+  background: var(--redBg);
+}
+
+#products-top .product-top-box-bg-2 {
+  background: var(--orangeBg);
+}
+
+#products-top .product-top-box-bg-3 {
+  background: var(--greenBg);
+}
+
+#products-top .products-top-box img {
+  max-height: 300px;
+  width: auto;
 }
 
 #products-top .products-top-box .triUp {

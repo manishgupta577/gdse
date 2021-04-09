@@ -1,6 +1,31 @@
-#home-hero {
+/* #home-hero {
   background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     url("../img/backgrounds/homeHero1.jpg") center / cover no-repeat;
+} */
+
+.home-hero-1 {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../img/backgrounds/homeHero1.jpg") center / cover no-repeat;
+}
+
+.home-hero-2 {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../img/backgrounds/homeHero2.jpg") center / cover no-repeat;
+}
+
+.home-hero-3 {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../img/backgrounds/homeHero3.jpg") center / cover no-repeat;
+}
+
+.home-hero-4 {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../img/backgrounds/homeHero4.jpg") center / cover no-repeat;
+}
+
+.home-hero-5 {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../img/backgrounds/homeHero5.jpg") center / cover no-repeat;
 }
 
 #home {

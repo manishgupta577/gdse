@@ -56,9 +56,16 @@ h2 {
   font-size: 1.625rem;
 }
 
+h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-family: var(--font2);
+}
+
 h4 {
   font-size: 4rem;
   text-transform: uppercase;
+  word-wrap: break-word;
 }
 
 h5 {
@@ -69,6 +76,50 @@ h5 {
 
 p {
   font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 3.5rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 3rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
 }
 
 * {

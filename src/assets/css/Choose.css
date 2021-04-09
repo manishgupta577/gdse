@@ -7,6 +7,10 @@
   max-width: 80px;
 }
 
+#certifications .cert img {
+  max-width: 200px;
+}
+
 #choose-provide {
   padding: 100px 0;
   background-image: url("../img/backgrounds/chooseProvide.jpg");

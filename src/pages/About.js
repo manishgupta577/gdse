@@ -3,9 +3,9 @@ import '../assets/css/About.css'
 import BgText from '../components/BgText'
 import Button from '../components/Button'
 
-import redPoly from "../assets/img/designs/aboutPolyRed.svg";
-import orangePoly from "../assets/img/designs/aboutPolyOrange.svg";
-import greenPoly from "../assets/img/designs/aboutPolyGreen.svg";
+import redPoly from "../assets/img/designs/aboutPolyRed.png";
+import orangePoly from "../assets/img/designs/aboutPolyOrange.png";
+import greenPoly from "../assets/img/designs/aboutPolyGreen.png";
 
 import lilyLee from '../assets/img/team/lilyLee.jpg'
 import ivyHuang from '../assets/img/team/ivyHuang.jpg'
@@ -43,29 +43,28 @@ function About() {
 
             <section id="about-info">
                 <div className="container">
-                    <div className="row justify-content-center align-items-center text-center">
+                    <div className="row justify-content-center align-items-center text-center no-gutters">
                         <div className="my-4 col-lg-4 col-md-4 col-12">
                             <img src={redPoly} alt="Polygon" className="img-fluid" />
                             <div className="inside-text">
-                                <h1 className="white">500</h1>
-                                <h2 className="white">Thousand</h2>
+                                <h3 className="red">500</h3>
+                                <h3 className="white">Thousand</h3>
                                 <h3 className="white">Pcs Annual Sale</h3>
                             </div>
                         </div>
                         <div className="my-4 col-lg-4 col-md-4 col-12">
                             <img src={orangePoly} alt="Polygon" className="img-fluid" />
                             <div className="inside-text">
-                                <h1 className="white">97.88</h1>
-                                <h2 className="white">Percent</h2>
+                                <h3 className="orange">97.88</h3>
+                                <h3 className="white">Percent</h3>
                                 <h3 className="white">Quick Response Rate</h3>
                             </div>
                         </div>
                         <div className="my-4 col-lg-4 col-md-4 col-12">
                             <img src={greenPoly} alt="Polygon" className="img-fluid" />
                             <div className="inside-text">
-                                <h2 className="white">Top</h2>
-                                <h1 className="white">3</h1>
-                                <h2 className="white">Seller</h2>
+                                <h3 className="green">Top 3</h3>
+                                <h3 className="white">Seller</h3>
                                 <h3 className="white">Last 5 Years</h3>
                             </div>
                         </div>
@@ -93,10 +92,10 @@ function About() {
                             </ul>
                         </div>
                         <div className="col-md-6 my-4">
-                            <img src={aboutText} dark="false" alt="Image" className="img-fluid" />
+                            <img src={aboutText} dark="false" alt="gdse" className="img-fluid" />
                         </div>
                         <div className="col-md-6 my-4">
-                            <img src={aboutFactory} dark="false" alt="Image" className="img-fluid" />
+                            <img src={aboutFactory} dark="false" alt="gdse" className="img-fluid" />
                         </div>
                         <div className="col-md-6 my-4">
                             <h1>Our Factory</h1>
@@ -117,13 +116,13 @@ function About() {
                 <div className="marquee">
                     <div className="track">
                         <div className="content">
-                            <img src={photo1} alt="Image" className="mx-3" />
-                            <img src={photo2} alt="Image" className="mx-3" />
-                            <img src={photo3} alt="Image" className="mx-3" />
-                            <img src={photo4} alt="Image" className="mx-3" />
-                            <img src={photo5} alt="Image" className="mx-3" />
-                            <img src={photo6} alt="Image" className="mx-3" />
-                            <img src={photo7} alt="Image" className="mx-3" />
+                            <img src={photo1} alt="gdse" className="mx-3" />
+                            <img src={photo2} alt="gdse" className="mx-3" />
+                            <img src={photo3} alt="gdse" className="mx-3" />
+                            <img src={photo4} alt="gdse" className="mx-3" />
+                            <img src={photo5} alt="gdse" className="mx-3" />
+                            <img src={photo6} alt="gdse" className="mx-3" />
+                            <img src={photo7} alt="gdse" className="mx-3" />
                         </div>
                     </div>
                 </div>

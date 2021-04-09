@@ -2,7 +2,6 @@ import React from "react";
 
 function BgText(props) {
   let len = props.text && props.text.length;
-  console.log(len);
   let fz = len < 6 ? 25 : 38.3714 - 2.25714 * len;
   return (
     <div>

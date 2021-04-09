@@ -7,6 +7,7 @@ import logoWhite from "../assets/img/logowhite.png";
 import triUp from "../assets/img/designs/triUp.svg";
 import triDown from "../assets/img/designs/triDown.svg";
 import blackPoly from "../assets/img/designs/productBlackPoly.svg";
+import Modal from 'react-modal';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Autoplay, EffectFade } from "swiper/core";
@@ -27,6 +28,7 @@ function Product(props) {
     const [products, setProducts] = useState();
     const [productInfo, setProductInfo] = useState({});
     const [reRender, setReRender] = useState(true);
+    const [modalIsOpen, setIsOpen] = useState(false);
     const history = useHistory();
 
     useEffect(() => {
@@ -34,6 +36,14 @@ function Product(props) {
         getProducts();
         getCategories();
     }, []);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
 
     function getProductInfo() {
         axios
@@ -84,12 +94,75 @@ function Product(props) {
             });
     }
 
-    console.log(productInfo);
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            outline: 'none',
+            minWidth: '20rem',
+            height: '80%',
+            maxHeight: '40rem',
+            minHeight: '20rem',
+            width: '80%',
+            maxWidth: '40rem',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)'
+        }
+    };
 
     return (
         <div>
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                style={customStyles}
+            >
+                <section id="quote-modal" style={{ position: "relative" }} className="h-100 w-100">
+                    <div
+                        onClick={closeModal}
+                        className="close-btn d-flex align-items-center justify-content-center"
+                    >
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div className="container d-flex align-items-center justify-content-center h-100 flex-column w-100">
+                        <h1 className="text-center mb-3">Get a <span className="red">Quote</span></h1>
+                        <form action="" className="w-100">
+                            <div className="form-row">
+                                <div className="form-group col-12 col-md-6">
+                                    <input type="text" className="form-control" placeholder="Name" />
+                                </div>
+                                <div className="form-group col-12 col-md-6">
+                                    <input type="text" className="form-control" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div className="form-row">
+                                <div className="form-group col-12 col-md-6">
+                                    <input type="text" className="form-control" placeholder="Country" />
+                                </div>
+                                <div className="form-group col-12 col-md-6">
+                                    <input type="text" className="form-control" placeholder="Contact Number" />
+                                </div>
+                            </div>
+                            <div className="form-row">
+                                <div className="form-group col-12 col-md-6">
+                                    <input type="text" className="form-control" placeholder="Company Name" />
+                                </div>
+                                <div className="form-group col-12 col-md-6">
+                                    <input type="text" className="form-control" placeholder="Intrested in Model" />
+                                </div>
+                            </div>
+                            <div className="form-group d-flex justify-content-center mt-4">
+                                <Button text="submit" type="solid" />
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </Modal>
+
             <Header theme="black" />
-            {productInfo != undefined && productInfo != null && (
+            {productInfo !== undefined && productInfo !== null && (
                 <>
                     <section
                         id="product-hero"
@@ -102,11 +175,13 @@ function Product(props) {
                                     <h5 className="green">{productInfo.landing_page_title1}</h5>
                                     <h4>{productInfo.landing_page_title2}</h4>
                                     <div className="d-block mt-5">
-                                        <Button
-                                            text="Products"
-                                            type="solid"
-                                            className="mr-3 mb-3"
-                                        />
+                                        <button onClick={openModal} className="border-0 bg-transparent">
+                                            <Button
+                                                text="Get a Quote"
+                                                type="solid"
+                                                className="mr-3 mb-3"
+                                            />
+                                        </button>
                                         <Button
                                             text="Virtual tour"
                                             type="border"
@@ -152,7 +227,7 @@ function Product(props) {
                         </div>
                     </section>
 
-                    <section id="info-text" className="pan-background">
+                    <section id="info-text">
                         <div className="container">
                             <p>{productInfo.info_page_content_1}</p>
                             <Button
@@ -164,7 +239,8 @@ function Product(props) {
                         </div>
                     </section>
                 </>
-            )}
+            )
+            }
 
             <section id="product-options">
                 <div className="container">
@@ -177,12 +253,12 @@ function Product(props) {
                         navigation>
                         <SwiperSlide>
                             <div className="text-center">
-                                <img src={heroInfo1} alt="Image" className="img-fluid" />
+                                <img src={heroInfo1} alt="gdse" className="img-fluid" />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="text-center">
-                                <img src={heroInfo1} alt="Image" className="img-fluid" />
+                                <img src={heroInfo1} alt="gdse" className="img-fluid" />
                             </div>
                         </SwiperSlide>
                     </Swiper>
@@ -207,12 +283,12 @@ function Product(props) {
                         }}
                         pagination={{ clickable: true }}
                     >
-                        {products != undefined &&
-                            products != null &&
+                        {products !== undefined &&
+                            products !== null &&
                             products.map((product, index) => {
                                 return (
                                     <SwiperSlide>
-                                        <div className="products-top-box py-4 px-4 d-flex flex-column justify-content-between">
+                                        <div className={`products-top-box product-top-box-bg-${index % 3 + 1}  py-4 px-4 d-flex flex-column justify-content-between`}>
                                             <img src={triUp} alt="TriUp" className="triUp" />
                                             <img src={triDown} alt="TriDown" className="triDown" />
                                             <img
@@ -260,8 +336,8 @@ function Product(props) {
                         }}
                         pagination={{ clickable: true }}
                     >
-                        {categories != null &&
-                            categories != undefined &&
+                        {categories !== null &&
+                            categories !== undefined &&
                             categories.map((category, index) => {
                                 return (
                                     <SwiperSlide>
@@ -289,7 +365,7 @@ function Product(props) {
             </section>
 
             <Footer />
-        </div>
+        </div >
     );
 }
 

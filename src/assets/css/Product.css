@@ -23,6 +23,7 @@
 
 #info-text {
   background: url("../img/backgrounds/guideDownload.jpg");
+  min-height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,7 +32,14 @@
 
 #info-text h1,
 #info-text p {
-  max-width: 500px;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  #info-text {
+    min-height: auto;
+    background-image: unset;
+  }
 }
 
 #product-options {
@@ -70,4 +78,34 @@
 
 #products-top .swiper-pagination-bullet-active {
   background: var(--red);
+}
+
+#quote-modal .close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+#quote-modal .close-btn i {
+  color: var(--black);
+}
+
+/* @media screen and (max-width: 550px) {
+  #quote-modal .close-btn {
+    height: 20px;
+    width: 20px;
+  }
+
+  #quote-modal .close-btn i {
+    color: var(--white);
+    font-size: 0.7rem;
+  }
+} */
+
+#quote-modal input {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--black);
 }

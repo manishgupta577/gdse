@@ -48,8 +48,8 @@ function Blog() {
       <section id="blogs">
         <div className="container">
           <div className="row justify-content-center">
-            {blogs != undefined &&
-              blogs != null &&
+            {blogs !== undefined &&
+              blogs !== null &&
               blogs.map((blog, index) => {
                 return (
                   <>

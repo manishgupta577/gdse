@@ -26,7 +26,6 @@ function Products(props) {
   const [products, setProducts] = useState();
   const [reRender, setReRender] = useState(true);
   const history = useHistory();
-  console.log(props);
 
   useEffect(() => {
     getProducts();
@@ -39,7 +38,6 @@ function Products(props) {
         `${requestUrls.base_url}category/${props.match.params.category_slug}/product/list`
       )
       .then((res) => {
-        // console.log(res);
         if (res.status === 200) {
           setProducts(res.data.payload.products);
           setReRender(!reRender);
@@ -54,7 +52,6 @@ function Products(props) {
     axios
       .get(`${requestUrls.base_url}${requestUrls.category_list}`)
       .then((res) => {
-        // console.log(res);
         if (res.status === 200) {
           setCategories(res.data.payload.categories);
           setReRender(!reRender);
@@ -105,12 +102,16 @@ function Products(props) {
             }}
             pagination={{ clickable: true }}
           >
-            {products != undefined &&
-              products != null &&
+            {products !== undefined &&
+              products !== null &&
               products.map((product, index) => {
                 return (
                   <SwiperSlide>
-                    <div className="products-top-box py-4 px-4 d-flex flex-column justify-content-between">
+                    <div
+                      className={`products-top-box product-top-box-bg-${
+                        (index % 3) + 1
+                      }  py-4 px-4 d-flex flex-column justify-content-between`}
+                    >
                       <img src={triUp} alt="TriUp" className="triUp" />
                       <img src={triDown} alt="TriDown" className="triDown" />
                       <img
@@ -158,8 +159,8 @@ function Products(props) {
             }}
             pagination={{ clickable: true }}
           >
-            {categories != null &&
-              categories != undefined &&
+            {categories !== null &&
+              categories !== undefined &&
               categories.map((category, index) => {
                 return (
                   <SwiperSlide>

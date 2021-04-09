@@ -28,18 +28,56 @@ const Header = (props) => {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto d-lg-flex align-items-center">
-              <li className="nav-item ml-5">
+            <ul className="navbar-nav ml-auto d-lg-flex align-items-center">
+              <li className="nav-item mr-4">
                 <Link className={`nav-link ${props.theme}`} to="/">
                   Home
                 </Link>
               </li>
-              <li className="nav-item ml-5">
-                <Link className={`nav-link ${props.theme}`}>Products</Link>
+              <li className="nav-item mr-4 dropdown">
+                <Link
+                  className={`nav-link ${props.theme} mx-2 dropdown-toggle`}
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Products
+                </Link>
+                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <Link className="dropdown-item" to="/mountain">
+                    Mountain
+                  </Link>
+                  <Link className="dropdown-item" to="/foldable">
+                    Foldable
+                  </Link>
+                  <Link className="dropdown-item" to="/city">
+                    City
+                  </Link>
+                  <Link className="dropdown-item" to="/delivery">
+                    Delivery
+                  </Link>
+                </div>
               </li>
-              <li className="nav-item ml-5">
+              <li className="nav-item mr-4">
                 <Link className={`nav-link ${props.theme}`} to="/about">
                   About Us
+                </Link>
+              </li>
+              <li className="nav-item mr-4">
+                <Link className={`nav-link ${props.theme}`} to="/choose">
+                  Why GDSE
+                </Link>
+              </li>
+              <li className="nav-item mr-4">
+                <Link className={`nav-link ${props.theme}`} to="/blog">
+                  Blogs
+                </Link>
+              </li>
+              <li className="nav-item mr-4">
+                <Link className={`nav-link ${props.theme}`} to="/about">
+                  Contact Us
                 </Link>
               </li>
             </ul>
