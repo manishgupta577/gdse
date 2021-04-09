@@ -7,7 +7,7 @@ function BlogPost(props) {
   const blog_details = props.location.state;
   return (
     <div>
-      <Header />
+      <Header theme="black" />
       <section id="post">
         <div className="container">
           <h2>{blog_details.blog_title}</h2>

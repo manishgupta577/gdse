@@ -14,9 +14,8 @@ import kikoRu from '../assets/img/team/kikoRu.jpg'
 import cindyWu from '../assets/img/team/cindyWu.jpg'
 import apurvGore from '../assets/img/team/apurvGore.jpg'
 
-
-import aboutText from '../assets/img/backgrounds/aboutText.jpg'
-import aboutFactory from '../assets/img/backgrounds/aboutFactory.jpg'
+import aboutText from '../assets/img/backgrounds/aboutText.jpeg'
+import aboutFactory from '../assets/img/backgrounds/aboutFactory.jpeg'
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 

@@ -13,7 +13,7 @@
 
 #choose-provide {
   padding: 100px 0;
-  background-image: url("../img/backgrounds/chooseProvide.jpg");
+  background-image: url("../img/backgrounds/chooseProvide.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,31 +25,7 @@
 
 #choose-service {
   padding: 100px 0;
-  background-image: url("../img/backgrounds/chooseService.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#choose-service ul {
-  list-style-position: inside;
-}
-
-#choose-service {
-  padding: 100px 0;
-  background-image: url("../img/backgrounds/chooseService.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#choose-service ul {
-  list-style-position: inside;
-}
-
-#choose-service {
-  padding: 100px 0;
-  background-image: url("../img/backgrounds/chooseService.jpg");
+  background-image: url("../img/backgrounds/chooseService.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,7 +37,7 @@
 
 #choose-help {
   padding: 100px 0;
-  background-image: url("../img/backgrounds/chooseHelp.jpg");
+  background-image: url("../img/backgrounds/chooseHelp.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

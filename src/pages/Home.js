@@ -18,7 +18,6 @@ import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/effect-fade/effect-fade.scss";
 import Header from "../components/Header";
-import bg_image from "../assets/img/cycles/typeMountain.jpg";
 import requestUrls from "../constants/requestUrls";
 import axios from "axios";
 import { useHistory } from "react-router";
