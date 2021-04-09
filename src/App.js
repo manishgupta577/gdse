@@ -11,9 +11,12 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Choose from "./pages/Choose";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/contact" component={Contact} />

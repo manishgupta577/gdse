@@ -241,46 +241,36 @@ p {
 }
 
 /* NAVBAR */
-#navbar {
-  background: rgba(255, 255, 255, 0);
-  transition: top 0.3s, background 0.3s;
-  z-index: 1000;
-}
-
 .navbar {
-  font-family: "Sen", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-family: var(--sen);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  /* color: #000; */
+  color: var(--white);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
 .navbar .nav-item .nav-link {
-  color: var(--white);
-  padding: 0;
-  transition: all 0.1s linear;
-}
-
-.navbar .nav-item .nav-link.black {
-  color: var(--black);
-  padding: 0;
-  transition: all 0.1s linear;
-}
-
-.navbar .nav-item .nav-link.black:hover {
-  color: var(--black);
-  padding: 0;
+  color: #fff;
   transition: all 0.1s linear;
 }
 
 .navbar .nav-item .nav-link:hover {
-  color: var(--white);
+  color: #fff;
   opacity: 0.6;
 }
 
-.navbar-brand {
-  color: #fc8804 !important;
+.dropdown-menu {
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-collapse {
+    background: #000;
+    text-align: left;
+  }
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -293,6 +283,13 @@ p {
 
 .custom-toggler.navbar-toggler:focus {
   border-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (min-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
 }
 
 /* FOOTER */

@@ -64,7 +64,7 @@ function Products(props) {
 
   return (
     <div>
-      <Header theme="black" />
+      <Header />
       <section
         id="products-hero"
         className="pan-background d-flex align-items-center"

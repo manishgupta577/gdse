@@ -30,7 +30,7 @@ import photo7 from '../assets/img/about/photo7.jpg'
 function About() {
     return (
         <div>
-            <Header theme="black" />
+            <Header />
             <section id="about-hero" className="pan-background d-flex align-items-center">
                 <BgText text="About" color="red" />
                 <div className="container">

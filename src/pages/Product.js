@@ -162,7 +162,7 @@ function Product(props) {
                 </section>
             </Modal>
 
-            <Header theme="black" />
+            <Header />
             {productInfo !== undefined && productInfo !== null && (
                 <>
                     <section

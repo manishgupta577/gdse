@@ -27,7 +27,7 @@ SwiperCore.use([Pagination, Autoplay, EffectFade]);
 function Choose() {
   return (
     <div>
-      <Header theme="black" />
+      <Header />
       <section
         id="choose-hero"
         className="pan-background d-flex align-items-center"

@@ -28,9 +28,9 @@
     url("../img/backgrounds/homeHero5.jpeg") center / cover no-repeat;
 }
 
-#home {
+/* #home {
   margin-top: -84px;
-}
+} */
 
 #home .swiper-pagination-bullet {
   background: var(--white);

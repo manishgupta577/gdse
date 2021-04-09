@@ -32,7 +32,7 @@ function Blog() {
   // console.log(blogs);
   return (
     <div>
-      <Header theme="black" />
+      <Header />
 
       {/* <section id="blog-hero">
         <div className="container">

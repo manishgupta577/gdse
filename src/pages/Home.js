@@ -64,7 +64,7 @@ const Home = (props) => {
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
-                  <Button text="Products" type="solid" className="mr-3" />
+                  <Button text="Products" type="solid" className="mr-3 my-3" />
                   <Button
                     text="Virtual tour"
                     isDark="dark"
@@ -90,7 +90,7 @@ const Home = (props) => {
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
-                  <Button text="Products" type="solid" className="mr-3" />
+                  <Button text="Products" type="solid" className="mr-3 my-3" />
                   <Button
                     text="Virtual tour"
                     isDark="dark"
@@ -116,7 +116,7 @@ const Home = (props) => {
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
-                  <Button text="Products" type="solid" className="mr-3" />
+                  <Button text="Products" type="solid" className="mr-3 my-3" />
                   <Button
                     text="Virtual tour"
                     isDark="dark"
@@ -142,7 +142,7 @@ const Home = (props) => {
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
-                  <Button text="Products" type="solid" className="mr-3" />
+                  <Button text="Products" type="solid" className="mr-3 my-3" />
                   <Button
                     text="Virtual tour"
                     isDark="dark"
@@ -168,7 +168,7 @@ const Home = (props) => {
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
-                  <Button text="Products" type="solid" className="mr-3" />
+                  <Button text="Products" type="solid" className="mr-3 my-3" />
                   <Button
                     text="Virtual tour"
                     isDark="dark"
