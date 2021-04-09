@@ -134,32 +134,32 @@ function About() {
                         <div className="col-md-4 col-sm-6 mb-4">
                             <img src={lilyLee} alt="Team" className="img-fluid" />
                             <h2 className="mt-3">Lily Lee</h2>
-                            <p>Creative Designer</p>
+                            {/* <p>Creative Designer</p> */}
                         </div>
                         <div className="col-md-4 col-sm-6 mb-4">
                             <img src={ivyHuang} alt="Team" className="img-fluid" />
                             <h2 className="mt-3">Ivy Huang</h2>
-                            <p>Creative Designer</p>
+                            {/* <p>Creative Designer</p> */}
                         </div>
                         <div className="col-md-4 col-sm-6 mb-4">
                             <img src={rajibGangopadhyay} alt="Team" className="img-fluid" />
                             <h2 className="mt-3">Rajib Gangopadhyay</h2>
-                            <p>Creative Designer</p>
+                            {/* <p>Creative Designer</p> */}
                         </div>
                         <div className="col-md-4 col-sm-6 mb-4">
                             <img src={kikoRu} alt="Team" className="img-fluid" />
                             <h2 className="mt-3">Kiko Ru</h2>
-                            <p>Creative Designer</p>
+                            {/* <p>Creative Designer</p> */}
                         </div>
                         <div className="col-md-4 col-sm-6 mb-4">
                             <img src={cindyWu} alt="Team" className="img-fluid" />
                             <h2 className="mt-3">Cindy Wu</h2>
-                            <p>Creative Designer</p>
+                            {/* <p>Creative Designer</p> */}
                         </div>
                         <div className="col-md-4 col-sm-6 mb-4">
                             <img src={apurvGore} alt="Team" className="img-fluid" />
                             <h2 className="mt-3">Cindy Wu</h2>
-                            <p>Creative Designer</p>
+                            {/* <p>Creative Designer</p> */}
                         </div>
                     </div>
                 </div>
