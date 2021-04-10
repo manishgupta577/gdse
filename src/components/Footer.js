@@ -64,7 +64,7 @@ const Footer = () => {
             formik_order.resetForm();
             let email_values = {
               subject: "A new order request is recieved.",
-              message: `<h1>A new Order request has been recieved from ${values.name} at GDSE Website</h1><h2>Order Details</h2><table><tbody><tr><td>Name</td><td>${values.name}</td></tr><tr><td>Company Name</td><td>${values.name}</td></tr><tr><td>Email</td><td>${values.name}</td></tr><tr><td>Product Name</td><td>${values.name}</td</tr><tr><td>Phone Number</td><td>${values.name}</td></tr><tr><td>Country</td><td>${values.name}</td></tr></tbody></table>`,
+              message: `<h1>A new Order request has been recieved from ${values.name} at GDSE Website</h1><h2>Order Details</h2><table><tbody><tr><td>Name</td><td>${values.name}</td></tr><tr><td>Company Name</td><td>${values.company_name}</td></tr><tr><td>Email</td><td>${values.email}</td></tr><tr><td>Product Name</td><td>${values.product_name}</td</tr><tr><td>Phone Number</td><td>${values.phone}</td></tr><tr><td>Country</td><td>${values.country}</td></tr></tbody></table>`,
               recipient_list: [`${values.email}`],
             };
             console.log(email_values);
