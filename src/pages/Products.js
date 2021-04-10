@@ -30,7 +30,7 @@ function Products(props) {
   useEffect(() => {
     getProducts();
     getCategories();
-  }, []);
+  }, [props.match.params.category_slug]);
 
   function getProducts() {
     axios

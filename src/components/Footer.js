@@ -4,6 +4,9 @@ import Button from "./Button";
 import footerHalf from "../assets/img/designs/footerHalf.png";
 import Modal from "react-modal";
 import $ from "jquery";
+import requestUrls from "../constants/requestUrls";
+import { useFormik } from "formik";
+import axios from "axios";
 
 const Footer = () => {
   useEffect(() => {
@@ -40,6 +43,78 @@ const Footer = () => {
   };
 
   const [modalIsOpen, setIsOpen] = useState(false);
+
+  const formik_order = useFormik({
+    initialValues: {
+      name: "",
+      company_name: "",
+      email: "",
+      product_name: "",
+      phone: "",
+      country: "",
+    },
+    onSubmit: (values) => {
+      // alert(JSON.stringify(values, null, 2));
+      axios
+        .post(`${requestUrls.base_url}${requestUrls.order}`, values)
+        .then((res) => {
+          console.log(res);
+          if (res.status === 200) {
+            formik_order.resetForm();
+            let email_values = {
+              subject: "A new order request is recieved.",
+              message: `<h1> A new Order request has been recieved from ${values.name}</h1><p>Below are the order details</p>`,
+              recipient_list: [`${values.email}`],
+            };
+
+            console.log(email_values);
+            console.log(values);
+
+            axios
+              .post(
+                `${requestUrls.base_url}${requestUrls.send_mail}`,
+                email_values
+              )
+              .then((res) => {
+                console.log(res);
+                if (res.status === 200) {
+                  alert(res.data.message);
+                }
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  });
+
+  const formik_lead = useFormik({
+    initialValues: {
+      name: "",
+      company_name: "",
+      email: "",
+      phone: "",
+    },
+    onSubmit: (values) => {
+      // alert(JSON.stringify(values, null, 2));
+      axios
+        .post(`${requestUrls.base_url}${requestUrls.lead}`, values)
+        .then((res) => {
+          console.log(res);
+          if (res.status === 200) {
+            alert(res.data.message);
+            formik_lead.resetForm();
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  });
   return (
     <>
       <Modal
@@ -62,13 +137,17 @@ const Footer = () => {
             <h1 className="text-center mb-3">
               Get a <span className="red">Quote</span>
             </h1>
-            <form action="" className="w-100">
+            <form onSubmit={formik_order.handleSubmit} className="w-100">
               <div className="form-row">
                 <div className="form-group col-12 col-md-6">
                   <input
                     type="text"
                     className="form-control"
                     placeholder="Name"
+                    name="name"
+                    id="name"
+                    onChange={formik_order.handleChange}
+                    value={formik_order.values.name}
                   />
                 </div>
                 <div className="form-group col-12 col-md-6">
@@ -76,6 +155,10 @@ const Footer = () => {
                     type="text"
                     className="form-control"
                     placeholder="Email"
+                    name="email"
+                    id="email"
+                    onChange={formik_order.handleChange}
+                    value={formik_order.values.email}
                   />
                 </div>
               </div>
@@ -85,6 +168,10 @@ const Footer = () => {
                     type="text"
                     className="form-control"
                     placeholder="Country"
+                    name="country"
+                    id="country"
+                    onChange={formik_order.handleChange}
+                    value={formik_order.values.country}
                   />
                 </div>
                 <div className="form-group col-12 col-md-6">
@@ -92,6 +179,10 @@ const Footer = () => {
                     type="text"
                     className="form-control"
                     placeholder="Contact Number"
+                    name="phone"
+                    id="phone"
+                    onChange={formik_order.handleChange}
+                    value={formik_order.values.phone}
                   />
                 </div>
               </div>
@@ -101,6 +192,10 @@ const Footer = () => {
                     type="text"
                     className="form-control"
                     placeholder="Company Name"
+                    name="company_name"
+                    id="company_name"
+                    onChange={formik_order.handleChange}
+                    value={formik_order.values.company_name}
                   />
                 </div>
                 <div className="form-group col-12 col-md-6">
@@ -108,11 +203,20 @@ const Footer = () => {
                     type="text"
                     className="form-control"
                     placeholder="Intrested in Model"
+                    name="product_name"
+                    id="product_name"
+                    onChange={formik_order.handleChange}
+                    value={formik_order.values.product_name}
                   />
                 </div>
               </div>
               <div className="form-group d-flex justify-content-center mt-4">
-                <Button text="submit" type="solid" />
+                <button
+                  className="bg-transparent border-0 mx-auto w-100"
+                  type="submit"
+                >
+                  <Button text="submit" type="solid" />
+                </button>
               </div>
             </form>
           </div>
@@ -150,13 +254,17 @@ const Footer = () => {
               <h2 className="text-center text-capitalize white mb-4">
                 Reach us out
               </h2>
-              <form action="">
+              <form onSubmit={formik_lead.handleSubmit}>
                 <div className="form-row form-group">
                   <div className="col-lg-6 col-sm-6 mb-3">
                     <input
                       type="text"
                       className="form-control"
                       placeholder="Name"
+                      name="name"
+                      id="name"
+                      onChange={formik_lead.handleChange}
+                      value={formik_lead.values.name}
                     />
                   </div>
                   <div className="col-lg-6 col-sm-6 mb-3">
@@ -164,6 +272,10 @@ const Footer = () => {
                       type="text"
                       className="form-control"
                       placeholder="Phone"
+                      name="phone"
+                      id="phone"
+                      onChange={formik_lead.handleChange}
+                      value={formik_lead.values.phone}
                     />
                   </div>
                   <div className="col-lg-6 col-sm-6 mb-3">
@@ -171,6 +283,10 @@ const Footer = () => {
                       type="text"
                       className="form-control"
                       placeholder="Email"
+                      name="email"
+                      id="email"
+                      onChange={formik_lead.handleChange}
+                      value={formik_lead.values.email}
                     />
                   </div>
                   <div className="col-lg-6 col-sm-6 mb-3">
@@ -178,15 +294,24 @@ const Footer = () => {
                       type="text"
                       className="form-control"
                       placeholder="Company"
+                      name="company_name"
+                      id="company_name"
+                      onChange={formik_lead.handleChange}
+                      value={formik_lead.values.company_name}
                     />
                   </div>
                   <div className="form-group mx-auto mt-3">
-                    <Button
-                      text="Submit"
-                      type="border"
-                      isDark="dark"
-                      border="orange"
-                    />
+                    <button
+                      className="bg-transparent border-0 mx-auto w-100"
+                      type="submit"
+                    >
+                      <Button
+                        text="Submit"
+                        type="border"
+                        isDark="dark"
+                        border="orange"
+                      />
+                    </button>
                   </div>
                 </div>
               </form>

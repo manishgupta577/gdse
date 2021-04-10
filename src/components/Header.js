@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logoWhite from "../assets/img/logowhite.png";
 import logoBlack from "../assets/img/logoblack.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import requestUrls from "../constants/requestUrls";
 
 const Header = (props) => {
+  const [categories, setCategories] = useState();
+  const [reRender, setReRender] = useState(true);
+
+  useEffect(() => {
+    getCategories();
+  }, []);
+
+  function getCategories() {
+    axios
+      .get(`${requestUrls.base_url}${requestUrls.category_list}`)
+      .then((res) => {
+        // console.log(res);
+        if (res.status === 200) {
+          setCategories(res.data.payload.categories);
+          setReRender(!reRender);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   return (
     <div id="navbar" className="navbar navbar-expand-lg fixed-top navbar-light">
       <div className="container">
@@ -43,21 +67,21 @@ const Header = (props) => {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Products
+                  Categories
                 </Link>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <Link className="dropdown-item" to="/mountain">
-                    Mountain
-                  </Link>
-                  <Link className="dropdown-item" to="/foldable">
-                    Foldable
-                  </Link>
-                  <Link className="dropdown-item" to="/city">
-                    City
-                  </Link>
-                  <Link className="dropdown-item" to="/delivery">
-                    Delivery
-                  </Link>
+                  {categories &&
+                    categories.map((category) => (
+                      <Link
+                        className="dropdown-item"
+                        to={{
+                          pathname: `/${category.slug}`,
+                          state: { category: category },
+                        }}
+                      >
+                        {category.name}
+                      </Link>
+                    ))}
                 </div>
               </li>
               <li className="nav-item mx-2">
