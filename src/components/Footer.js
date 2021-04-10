@@ -55,6 +55,7 @@ const Footer = () => {
     },
     onSubmit: (values) => {
       // alert(JSON.stringify(values, null, 2));
+
       axios
         .post(`${requestUrls.base_url}${requestUrls.order}`, values)
         .then((res) => {
@@ -63,13 +64,11 @@ const Footer = () => {
             formik_order.resetForm();
             let email_values = {
               subject: "A new order request is recieved.",
-              message: `<h1> A new Order request has been recieved from ${values.name}</h1><p>Below are the order details</p>`,
+              message: `<h1>A new Order request has been recieved from ${values.name} at GDSE Website</h1><h2>Order Details</h2><table><tbody><tr><td>Name</td><td>${values.name}</td></tr><tr><td>Company Name</td><td>${values.name}</td></tr><tr><td>Email</td><td>${values.name}</td></tr><tr><td>Product Name</td><td>${values.name}</td</tr><tr><td>Phone Number</td><td>${values.name}</td></tr><tr><td>Country</td><td>${values.name}</td></tr></tbody></table>`,
               recipient_list: [`${values.email}`],
             };
-
             console.log(email_values);
             console.log(values);
-
             axios
               .post(
                 `${requestUrls.base_url}${requestUrls.send_mail}`,
