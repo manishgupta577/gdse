@@ -59,16 +59,16 @@ const Footer = () => {
       axios
         .post(`${requestUrls.base_url}${requestUrls.order}`, values)
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           if (res.status === 200) {
             formik_order.resetForm();
             let email_values = {
               subject: "A new order request is recieved.",
               message: `<h1>A new Order request has been recieved from ${values.name} at GDSE Website</h1><h2>Order Details</h2><table><tbody><tr><td>Name</td><td>${values.name}</td></tr><tr><td>Company Name</td><td>${values.company_name}</td></tr><tr><td>Email</td><td>${values.email}</td></tr><tr><td>Product Name</td><td>${values.product_name}</td</tr><tr><td>Phone Number</td><td>${values.phone}</td></tr><tr><td>Country</td><td>${values.country}</td></tr></tbody></table>`,
-              recipient_list: [`${values.email}`],
+              recipient_list: [`${values.email}`, "tech.gdse@gmail.com"],
             };
-            console.log(email_values);
-            console.log(values);
+            // console.log(email_values);
+            // console.log(values);
             axios
               .post(
                 `${requestUrls.base_url}${requestUrls.send_mail}`,
@@ -103,10 +103,32 @@ const Footer = () => {
       axios
         .post(`${requestUrls.base_url}${requestUrls.lead}`, values)
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           if (res.status === 200) {
             alert(res.data.message);
             formik_lead.resetForm();
+            formik_order.resetForm();
+            let email_values = {
+              subject: "A new lead is recieved.",
+              message: `<h1>A new lead has been recieved from ${values.name} at GDSE Website</h1><h2>Order Details</h2><table><tbody><tr><td>Name</td><td>${values.name}</td></tr><tr><td>Company Name</td><td>${values.company_name}</td></tr><tr><td>Email</td><td>${values.email}</td></tr><tr><td>Phone Number</td><td>${values.phone}</td></tr></tbody></table>`,
+              recipient_list: ["tech.gdse@gmail"],
+            };
+            // console.log(email_values);
+            // console.log(values);
+            axios
+              .post(
+                `${requestUrls.base_url}${requestUrls.send_mail}`,
+                email_values
+              )
+              .then((res) => {
+                console.log(res);
+                if (res.status === 200) {
+                  alert(res.data.message);
+                }
+              })
+              .catch((err) => {
+                console.log(err);
+              });
           }
         })
         .catch((err) => {
