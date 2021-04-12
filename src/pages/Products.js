@@ -123,7 +123,9 @@ function Products(props) {
                         <h5 className="text-center">{product.name}</h5>
                         <button
                           onClick={() =>
-                            history.push(`${props.match.url}/${product.slug}`)
+                            history.push(
+                              `/${props.match.params.category_slug}/${product.slug}`
+                            )
                           }
                           className="bg-transparent border-0 mx-auto mt-4"
                         >

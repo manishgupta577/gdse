@@ -36,6 +36,7 @@ function Product(props) {
   const [reRender, setReRender] = useState(true);
   const [modalIsOpen, setIsOpen] = useState(false);
   const history = useHistory();
+  // console.log(props);
 
   useEffect(() => {
     console.log("use effect is running");
@@ -338,7 +339,9 @@ function Product(props) {
                         <h5 className="text-center">{product.name}</h5>
                         <button
                           onClick={() =>
-                            history.push(`${props.match.url}/${product.slug}`)
+                            history.push(
+                              `/${props.match.params.category_slug}/${product.slug}`
+                            )
                           }
                           className="bg-transparent border-0 mx-auto mt-4"
                         >
