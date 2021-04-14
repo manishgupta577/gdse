@@ -4,6 +4,7 @@ import logoBlack from "../assets/img/logoblack.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import requestUrls from "../constants/requestUrls";
+import { HashLink } from "react-router-hash-link";
 
 const Header = (props) => {
   const [categories, setCategories] = useState();
@@ -100,9 +101,13 @@ const Header = (props) => {
                 </Link>
               </li>
               <li className="nav-item mx-2">
-                <Link className={`nav-link ${props.theme}`} to="/about">
+                <HashLink
+                  className={`nav-link ${props.theme}`}
+                  to="#footer"
+                  smooth
+                >
                   Contact Us
-                </Link>
+                </HashLink>
               </li>
             </ul>
           </div>

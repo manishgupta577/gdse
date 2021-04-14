@@ -319,11 +319,14 @@ const Footer = () => {
               <div className="d-flex flex-column text-center">
                 <h2 className="text-capitalize white mb-4">Let's connect</h2>
                 <p className="white mb-0">Email</p>
-                <a className="font-weight-bold mb-4" href="/">
+                <a
+                  className="font-weight-bold mb-4"
+                  href="mailto:info@gdsebike.com"
+                >
                   info@gdsebike.com
                 </a>
                 <p className="white mb-0">Contact</p>
-                <a href="/">0086-15975428800</a>
+                <a href="tel:008615975428800">0086-15975428800</a>
               </div>
             </div>
           </div>

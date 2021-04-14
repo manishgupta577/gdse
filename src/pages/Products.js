@@ -18,6 +18,7 @@ import Footer from "../components/Footer";
 import { useHistory } from "react-router";
 import axios from "axios";
 import requestUrls from "../constants/requestUrls";
+import { HashLink } from "react-router-hash-link";
 
 SwiperCore.use([Pagination, Autoplay, EffectFade]);
 
@@ -75,7 +76,9 @@ function Products(props) {
             <div className="col-md-6">
               <h5 className="green">Explore</h5>
               <h4>Models</h4>
-              <Button text="Products" type="solid" className="mt-3" />
+              <HashLink to="#products-top" smooth>
+                <Button text="Products" type="solid" className="mt-3" />
+              </HashLink>
             </div>
             <div className="col-md-6">
               <img src={heroInfo1} alt="Cycle" className="img-fluid" />
