@@ -7,6 +7,7 @@ import $ from "jquery";
 import requestUrls from "../constants/requestUrls";
 import { useFormik } from "formik";
 import axios from "axios";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   useEffect(() => {
@@ -238,14 +239,14 @@ const Footer = () => {
                 <Link className="mb-2" to="/">
                   Home
                 </Link>
-                <Link className="mb-2" to="/products">
+                <HashLink className="mb-2" to="/#home-types" smooth>
                   Products
-                </Link>
+                </HashLink>
                 <Link className="mb-2" to="/about">
                   About Us
                 </Link>
-                <Link className="mb-2" to="/contact">
-                  Contact Us
+                <Link className="mb-2" to="/choose">
+                  Why GDSE
                 </Link>
               </div>
             </div>
