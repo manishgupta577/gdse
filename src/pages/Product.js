@@ -327,9 +327,8 @@ function Product(props) {
                 return (
                   <SwiperSlide>
                     <div
-                      className={`products-top-box product-top-box-bg-${
-                        (index % 3) + 1
-                      }  py-4 px-4 d-flex flex-column justify-content-between`}
+                      className={`products-top-box product-top-box-bg-${(index % 3) + 1
+                        }  py-4 px-4 d-flex flex-column justify-content-between`}
                     >
                       <img src={triUp} alt="TriUp" className="triUp" />
                       <img src={triDown} alt="TriDown" className="triDown" />
