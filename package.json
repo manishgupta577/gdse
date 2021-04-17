@@ -19,6 +19,7 @@
     "react-gsap": "^2.2.1",
     "react-modal": "^3.12.1",
     "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.0",
     "react-scripts": "4.0.3",
     "react-scrollmagic": "^2.3.0",
     "react-text-vice": "^1.2.0",

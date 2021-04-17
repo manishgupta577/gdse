@@ -7,6 +7,7 @@ import $ from "jquery";
 import requestUrls from "../constants/requestUrls";
 import { useFormik } from "formik";
 import axios from "axios";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   useEffect(() => {
@@ -260,14 +261,14 @@ const Footer = () => {
                 <Link className="mb-2" to="/">
                   Home
                 </Link>
-                <Link className="mb-2" to="/products">
+                <HashLink className="mb-2" to="/#home-types" smooth>
                   Products
-                </Link>
+                </HashLink>
                 <Link className="mb-2" to="/about">
                   About Us
                 </Link>
-                <Link className="mb-2" to="/contact">
-                  Contact Us
+                <Link className="mb-2" to="/choose">
+                  Why GDSE
                 </Link>
               </div>
             </div>
@@ -341,11 +342,14 @@ const Footer = () => {
               <div className="d-flex flex-column text-center">
                 <h2 className="text-capitalize white mb-4">Let's connect</h2>
                 <p className="white mb-0">Email</p>
-                <a className="font-weight-bold mb-4" href="/">
+                <a
+                  className="font-weight-bold mb-4"
+                  href="mailto:info@gdsebike.com"
+                >
                   info@gdsebike.com
                 </a>
                 <p className="white mb-0">Contact</p>
-                <a href="/">0086-15975428800</a>
+                <a href="tel:008615975428800">0086-15975428800</a>
               </div>
             </div>
           </div>

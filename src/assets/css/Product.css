@@ -30,9 +30,19 @@
   padding: 100px 0;
 }
 
+#info-text p {
+  font-size: 1rem;
+}
+
 #info-text h1,
 #info-text p {
-  max-width: 400px;
+  max-width: 600px;
+}
+
+@media screen and (min-width: 768px) {
+  #info-text p {
+    font-size: 0.85rem;
+  }
 }
 
 @media screen and (max-width: 768px) {

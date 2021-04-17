@@ -21,6 +21,7 @@ import "swiper/components/pagination/pagination.scss";
 import "swiper/components/effect-fade/effect-fade.scss";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { HashLink } from "react-router-hash-link";
 
 SwiperCore.use([Pagination, Autoplay, EffectFade]);
 
@@ -39,7 +40,9 @@ function Choose() {
               <h5 className="red">Why</h5>
               <h4>Choose Us?</h4>
               <div className="d-block mt-5">
-                <Button text="Products" type="solid" className="mr-3 mb-3" />
+                <HashLink to="/#home-types" smooth>
+                  <Button text="Products" type="solid" className="mr-3 mb-3" />
+                </HashLink>
               </div>
             </div>
             <div className="col-md-6">
@@ -55,12 +58,14 @@ function Choose() {
             <div className="col-lg-6 my-3">
               <h5 className="green">Globally Recognized.</h5>
               <h4>All Required Certifications</h4>
-              <Button
-                text="Contact Us"
-                type="border"
-                border="green"
-                className="mt-3"
-              />
+              <HashLink to="#footer" smooth>
+                <Button
+                  text="Contact Us"
+                  type="border"
+                  border="green"
+                  className="mt-3"
+                />
+              </HashLink>
             </div>
             <div className="col-lg-6 my-3">
               <Swiper
@@ -123,12 +128,14 @@ function Choose() {
             <div className="col-md-6 my-3">
               <h5 className="green">CUSTOMIZE.</h5>
               <h4>Get Country Specific Specs</h4>
-              <Button
-                text="Contact Us"
-                type="border"
-                border="green"
-                className="mt-3"
-              />
+              <HashLink to="#footer" smooth>
+                <Button
+                  text="Contact Us"
+                  type="border"
+                  border="green"
+                  className="mt-3"
+                />
+              </HashLink>
             </div>
           </div>
         </div>
@@ -156,19 +163,21 @@ function Choose() {
             <div className="col-md-6 my-3">
               <h5 className="orange">WORLD CLASS.</h5>
               <h4>AFTER SALE SERVICE</h4>
-              <Button
-                text="Contact Us"
-                type="border"
-                border="orange"
-                className="mt-3"
-              />
+              <HashLink to="#footer" smooth>
+                <Button
+                  text="Contact Us"
+                  type="border"
+                  border="orange"
+                  className="mt-3"
+                />
+              </HashLink>
             </div>
           </div>
         </div>
       </section>
 
       <section
-        id="choose-help"
+        id="choose-save"
         className="pan-background d-flex align-items-center"
       >
         <div className="container">
@@ -189,14 +198,16 @@ function Choose() {
               </h2>
             </div>
             <div className="col-md-6 my-3">
-              <h5 className="red">WORLD CLASS.</h5>
-              <h4>AFTER SALE SERVICE</h4>
-              <Button
-                text="Contact Us"
-                type="border"
-                border="red"
-                className="mt-3"
-              />
+              <h5 className="red">Save big.</h5>
+              <h4>Anti Dumping Solution</h4>
+              <HashLink to="#footer" smooth>
+                <Button
+                  text="Contact Us"
+                  type="border"
+                  border="red"
+                  className="mt-3"
+                />
+              </HashLink>
             </div>
           </div>
         </div>

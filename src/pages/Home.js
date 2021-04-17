@@ -21,6 +21,7 @@ import Header from "../components/Header";
 import requestUrls from "../constants/requestUrls";
 import axios from "axios";
 import { useHistory } from "react-router";
+import { HashLink } from "react-router-hash-link";
 
 SwiperCore.use([Pagination, Autoplay, EffectFade]);
 
@@ -64,7 +65,13 @@ const Home = (props) => {
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
-                  <Button text="Products" type="solid" className="mr-3 my-3" />
+                  <HashLink to="/#home-types" smooth>
+                    <Button
+                      text="Products"
+                      type="solid"
+                      className="mr-3 my-3"
+                    />
+                  </HashLink>
                   <Button
                     text="Virtual tour"
                     isDark="dark"
@@ -90,7 +97,13 @@ const Home = (props) => {
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
-                  <Button text="Products" type="solid" className="mr-3 my-3" />
+                  <HashLink to="/#home-types" smooth>
+                    <Button
+                      text="Products"
+                      type="solid"
+                      className="mr-3 my-3"
+                    />
+                  </HashLink>
                   <Button
                     text="Virtual tour"
                     isDark="dark"
@@ -116,7 +129,13 @@ const Home = (props) => {
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
-                  <Button text="Products" type="solid" className="mr-3 my-3" />
+                  <HashLink to="/#home-types" smooth>
+                    <Button
+                      text="Products"
+                      type="solid"
+                      className="mr-3 my-3"
+                    />
+                  </HashLink>
                   <Button
                     text="Virtual tour"
                     isDark="dark"
@@ -142,7 +161,13 @@ const Home = (props) => {
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
-                  <Button text="Products" type="solid" className="mr-3 my-3" />
+                  <HashLink to="/#home-types" smooth>
+                    <Button
+                      text="Products"
+                      type="solid"
+                      className="mr-3 my-3"
+                    />
+                  </HashLink>
                   <Button
                     text="Virtual tour"
                     isDark="dark"
@@ -168,7 +193,13 @@ const Home = (props) => {
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
-                  <Button text="Products" type="solid" className="mr-3 my-3" />
+                  <HashLink to="/#home-types" smooth>
+                    <Button
+                      text="Products"
+                      type="solid"
+                      className="mr-3 my-3"
+                    />
+                  </HashLink>
                   <Button
                     text="Virtual tour"
                     isDark="dark"
@@ -189,12 +220,14 @@ const Home = (props) => {
             <div className="col-lg-6">
               <h5 className="green">Customize.</h5>
               <h4>Get country specifice specs</h4>
-              <Button
-                text="View models"
-                type="border"
-                border="green"
-                className="mt-3"
-              />
+              <HashLink to="/#home-types" smooth>
+                <Button
+                  text="View models"
+                  type="border"
+                  border="green"
+                  className="mt-3"
+                />
+              </HashLink>
             </div>
             <div className="col-lg-6">
               <div className="mx-auto">
@@ -217,12 +250,14 @@ const Home = (props) => {
             <div className="col-lg-6">
               <h5 className="red">World class.</h5>
               <h4>After sale service</h4>
-              <Button
-                text="Know why"
-                type="border"
-                border="red"
-                className="mt-3"
-              />
+              <HashLink to="/choose#choose-service" smooth>
+                <Button
+                  text="Know why"
+                  type="border"
+                  border="red"
+                  className="mt-3"
+                />
+              </HashLink>
             </div>
           </div>
         </div>
@@ -235,12 +270,14 @@ const Home = (props) => {
             <div className="col-lg-6">
               <h5 className="orange">Save big.</h5>
               <h4>Anti dumping solution</h4>
-              <Button
-                text="Know how"
-                type="border"
-                border="orange"
-                className="mt-3"
-              />
+              <HashLink to="/choose#choose-save" smooth>
+                <Button
+                  text="Know how"
+                  type="border"
+                  border="orange"
+                  className="mt-3"
+                />
+              </HashLink>
             </div>
             <div className="col-lg-6">
               <div className="mx-auto">
@@ -304,18 +341,20 @@ const Home = (props) => {
         <div className="container">
           <h1 className="orange">
             <span className="green">Guide</span> to buy from
-            <span className="red">China</span>
+            <span className="red"> China</span>
           </h1>
           <p>
             Get your free E-Guide on how to avoid any errors and have a splendid
             experience buying E-Bikes from China.
           </p>
-          <Button
-            text="Download Now"
-            type="border"
-            border="red"
-            className="mt-3"
-          />
+          <HashLink to="#footer" smooth>
+            <Button
+              text="Download Now"
+              type="border"
+              border="red"
+              className="mt-3"
+            />
+          </HashLink>
         </div>
       </section>
 

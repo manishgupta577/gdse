@@ -18,6 +18,7 @@ import Footer from "../components/Footer";
 import { useHistory } from "react-router";
 import axios from "axios";
 import requestUrls from "../constants/requestUrls";
+import { HashLink } from "react-router-hash-link";
 
 SwiperCore.use([Pagination, Autoplay, EffectFade]);
 

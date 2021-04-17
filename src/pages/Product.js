@@ -26,6 +26,7 @@ import axios from "axios";
 import requestUrls from "../constants/requestUrls";
 import { useHistory } from "react-router";
 import $ from "jquery";
+import { HashLink } from "react-router-hash-link";
 
 SwiperCore.use([Navigation, Pagination, Autoplay, EffectFade]);
 
@@ -271,12 +272,14 @@ function Product(props) {
           <section id="info-text">
             <div className="container">
               <p>{productInfo.info_page_content_1}</p>
-              <Button
-                text="Download Now"
-                type="border"
-                border="red"
-                className="mt-3"
-              />
+              <HashLink to="#footer" smooth>
+                <Button
+                  text="Download Now"
+                  type="border"
+                  border="red"
+                  className="mt-3"
+                />
+              </HashLink>
             </div>
           </section>
         </>
@@ -324,9 +327,8 @@ function Product(props) {
                 return (
                   <SwiperSlide>
                     <div
-                      className={`products-top-box product-top-box-bg-${
-                        (index % 3) + 1
-                      }  py-4 px-4 d-flex flex-column justify-content-between`}
+                      className={`products-top-box product-top-box-bg-${(index % 3) + 1
+                        }  py-4 px-4 d-flex flex-column justify-content-between`}
                     >
                       <img src={triUp} alt="TriUp" className="triUp" />
                       <img src={triDown} alt="TriDown" className="triDown" />
