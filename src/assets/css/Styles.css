@@ -311,7 +311,8 @@ p {
   color: var(--white);
 }
 
-#footer input {
+#footer input,
+#footer select {
   background: transparent;
   border: none;
   border-bottom: 1px solid var(--white);

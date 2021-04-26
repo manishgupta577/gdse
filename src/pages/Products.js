@@ -74,7 +74,7 @@ function Products(props) {
       });
   }
 
-  console.log(currentCategory);
+  // console.log(currentCategory);
 
   return (
     <div>

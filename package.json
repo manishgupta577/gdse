@@ -24,7 +24,8 @@
     "react-scrollmagic": "^2.3.0",
     "react-text-vice": "^1.2.0",
     "swiper": "^6.5.2",
-    "web-vitals": "^1.1.1"
+    "web-vitals": "^1.1.1",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",

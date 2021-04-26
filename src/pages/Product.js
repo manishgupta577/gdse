@@ -34,14 +34,16 @@ function Product(props) {
   const [categories, setCategories] = useState();
   const [products, setProducts] = useState();
   const [productInfo, setProductInfo] = useState({});
+  const [productImages, setProductImages] = useState([]);
   const [reRender, setReRender] = useState(true);
   const [modalIsOpen, setIsOpen] = useState(false);
   const history = useHistory();
   // console.log(props);
 
   useEffect(() => {
-    console.log("use effect is running");
+    // console.log("use effect is running");
     getProductInfo();
+    getProductImages();
     getProducts();
     getCategories();
   }, [props.match.params.product_slug]);
@@ -52,6 +54,23 @@ function Product(props) {
 
   function closeModal() {
     setIsOpen(false);
+  }
+
+  function getProductImages() {
+    axios
+      .get(
+        `${requestUrls.base_url}product/${props.match.params.product_slug}/images`
+      )
+      .then((res) => {
+        // console.log(res);
+        if (res.status === 200) {
+          setProductImages(res.data.payload.productImages);
+          setReRender(!reRender);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   function getProductInfo() {
@@ -120,6 +139,8 @@ function Product(props) {
       transform: "translate(-50%, -50%)",
     },
   };
+
+  // console.log(productImages);
 
   return (
     <div>
@@ -289,16 +310,20 @@ function Product(props) {
         <div className="container">
           <h2>Explore Design and Color Options</h2>
           <Swiper spaceBetween={50} slidesPerView={1} loop autoplay navigation>
-            <SwiperSlide>
-              <div className="text-center">
-                <img src={heroInfo1} alt="gdse" className="img-fluid" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="text-center">
-                <img src={heroInfo1} alt="gdse" className="img-fluid" />
-              </div>
-            </SwiperSlide>
+            {productImages &&
+              productImages.map((image, index) => {
+                return (
+                  <SwiperSlide>
+                    <div className="text-center">
+                      <img
+                        src={image.image}
+                        alt={image.name}
+                        className="img-fluid"
+                      />
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
           </Swiper>
         </div>
       </section>
@@ -327,8 +352,9 @@ function Product(props) {
                 return (
                   <SwiperSlide>
                     <div
-                      className={`products-top-box product-top-box-bg-${(index % 3) + 1
-                        }  py-4 px-4 d-flex flex-column justify-content-between`}
+                      className={`products-top-box product-top-box-bg-${
+                        (index % 3) + 1
+                      }  py-4 px-4 d-flex flex-column justify-content-between`}
                     >
                       <img src={triUp} alt="TriUp" className="triUp" />
                       <img src={triDown} alt="TriDown" className="triDown" />
