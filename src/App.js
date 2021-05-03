@@ -9,8 +9,11 @@ import Product from "./pages/Product";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Choose from "./pages/Choose";
-
+import ReactGA from "react-ga";
 import ScrollToTop from "./components/ScrollToTop";
+
+const TRACKING_ID = "UA-195955983-1";
+ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
   return (
