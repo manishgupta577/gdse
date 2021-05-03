@@ -8,13 +8,18 @@ import requestUrls from "../constants/requestUrls";
 import { useFormik } from "formik";
 import axios from "axios";
 import { HashLink } from "react-router-hash-link";
+import * as Yup from "yup";
 
 const Footer = () => {
+  const [products, setProducts] = useState([]);
+  const [reRender, setReRender] = useState(true);
+
   useEffect(() => {
     $("html").bind("mouseleave", function () {
       openModal();
       $("html").unbind("mouseleave");
     });
+    getProducts();
   }, []);
 
   function openModal() {
@@ -23,6 +28,21 @@ const Footer = () => {
 
   function closeModal() {
     setIsOpen(false);
+  }
+
+  function getProducts() {
+    axios
+      .get(`${requestUrls.base_url}product/list`)
+      .then((res) => {
+        // console.log(res);
+        if (res.status === 200) {
+          setProducts(res.data.payload.products);
+          setReRender(!reRender);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   const customStyles = {
@@ -44,6 +64,11 @@ const Footer = () => {
   };
 
   const [modalIsOpen, setIsOpen] = useState(false);
+  const phoneRegExp = "/^(+d{1,2}s?)?1?-?.?s?(?d{3})?[s.-]?d{3}[s.-]?d{4}$/";
+
+  const orderSchema = Yup.object().shape({
+    phone: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
+  });
 
   const formik_order = useFormik({
     initialValues: {
@@ -54,20 +79,21 @@ const Footer = () => {
       phone: "",
       country: "",
     },
+    // validationSchema: orderSchema,
     onSubmit: (values) => {
       // alert(JSON.stringify(values, null, 2));
 
       axios
         .post(`${requestUrls.base_url}${requestUrls.order}`, values)
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           if (res.status === 200) {
-            formik_order.resetForm();
             let email_values = {
               subject: "A new order request is recieved.",
-              message: `<h1>A new Order request has been recieved from ${values.name} at GDSE Website</h1><h2>Order Details</h2><table><tbody><tr><td>Name</td><td>${values.name}</td></tr><tr><td>Company Name</td><td>${values.company_name}</td></tr><tr><td>Email</td><td>${values.email}</td></tr><tr><td>Product Name</td><td>${values.product_name}</td</tr><tr><td>Phone Number</td><td>${values.phone}</td></tr><tr><td>Country</td><td>${values.country}</td></tr></tbody></table>`,
-              recipient_list: [`${values.email}`],
+              message: `<h2>A new Order request has been recieved from ${values.name} at GDSE Website</h2><h2>Order Details</h2><table><tbody><tr><td>Name</td><td>${values.name}</td></tr><tr><td>Company Name</td><td>${values.company_name}</td></tr><tr><td>Email</td><td>${values.email}</td></tr><tr><td>Product Name</td><td>${values.product_name}</td</tr><tr><td>Phone Number</td><td>${values.phone}</td></tr><tr><td>Country</td><td>${values.country}</td></tr></tbody></table>`,
+              recipient_list: [`${values.email}`, "jhemant539@gmail.com"],
             };
+
             console.log(email_values);
             console.log(values);
             axios
@@ -79,6 +105,7 @@ const Footer = () => {
                 console.log(res);
                 if (res.status === 200) {
                   alert(res.data.message);
+                  formik_order.resetForm();
                 }
               })
               .catch((err) => {
@@ -104,10 +131,32 @@ const Footer = () => {
       axios
         .post(`${requestUrls.base_url}${requestUrls.lead}`, values)
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           if (res.status === 200) {
             alert(res.data.message);
             formik_lead.resetForm();
+            formik_order.resetForm();
+            let email_values = {
+              subject: "A new lead is recieved.",
+              message: `<h1>A new lead has been recieved from ${values.name} at GDSE Website</h1><h2>Order Details</h2><table><tbody><tr><td>Name</td><td>${values.name}</td></tr><tr><td>Company Name</td><td>${values.company_name}</td></tr><tr><td>Email</td><td>${values.email}</td></tr><tr><td>Phone Number</td><td>${values.phone}</td></tr></tbody></table>`,
+              recipient_list: ["tech.gdse@gmail"],
+            };
+            // console.log(email_values);
+            // console.log(values);
+            axios
+              .post(
+                `${requestUrls.base_url}${requestUrls.send_mail}`,
+                email_values
+              )
+              .then((res) => {
+                console.log(res);
+                if (res.status === 200) {
+                  alert(res.data.message);
+                }
+              })
+              .catch((err) => {
+                console.log(err);
+              });
           }
         })
         .catch((err) => {
@@ -115,6 +164,10 @@ const Footer = () => {
         });
     },
   });
+
+  // console.log(formik_order.errors);
+  // console.log(products);
+
   return (
     <>
       <Modal
@@ -141,6 +194,7 @@ const Footer = () => {
               <div className="form-row">
                 <div className="form-group col-12 col-md-6">
                   <input
+                    required
                     type="text"
                     className="form-control"
                     placeholder="Name"
@@ -152,7 +206,8 @@ const Footer = () => {
                 </div>
                 <div className="form-group col-12 col-md-6">
                   <input
-                    type="text"
+                    required
+                    type="email"
                     className="form-control"
                     placeholder="Email"
                     name="email"
@@ -165,6 +220,7 @@ const Footer = () => {
               <div className="form-row">
                 <div className="form-group col-12 col-md-6">
                   <input
+                    required
                     type="text"
                     className="form-control"
                     placeholder="Country"
@@ -176,7 +232,9 @@ const Footer = () => {
                 </div>
                 <div className="form-group col-12 col-md-6">
                   <input
+                    required
                     type="text"
+                    data-mask=""
                     className="form-control"
                     placeholder="Contact Number"
                     name="phone"
@@ -189,6 +247,7 @@ const Footer = () => {
               <div className="form-row">
                 <div className="form-group col-12 col-md-6">
                   <input
+                    required
                     type="text"
                     className="form-control"
                     placeholder="Company Name"
@@ -199,7 +258,8 @@ const Footer = () => {
                   />
                 </div>
                 <div className="form-group col-12 col-md-6">
-                  <input
+                  {/* <input
+                    required
                     type="text"
                     className="form-control"
                     placeholder="Intrested in Model"
@@ -207,7 +267,28 @@ const Footer = () => {
                     id="product_name"
                     onChange={formik_order.handleChange}
                     value={formik_order.values.product_name}
-                  />
+                  /> */}
+                  <select
+                    className="form-control"
+                    required
+                    id="product_name"
+                    name="product_name"
+                    onChange={formik_order.handleChange}
+                    value={formik_order.values.product_name}
+                    style={{ textTransform: "capitalize" }}
+                  >
+                    <option value="">Select</option>
+                    {products.map((product, index) => {
+                      return (
+                        <option
+                          style={{ textTransform: "capitalize" }}
+                          value={product.name}
+                        >
+                          {product.name}
+                        </option>
+                      );
+                    })}
+                  </select>
                 </div>
               </div>
               <div className="form-group d-flex justify-content-center mt-4">

@@ -27,11 +27,20 @@ function Products(props) {
   const [products, setProducts] = useState();
   const [reRender, setReRender] = useState(true);
   const history = useHistory();
+  const [currentCategory, setCurrentCategory] = useState({});
 
   useEffect(() => {
     getProducts();
     getCategories();
   }, [props.match.params.category_slug]);
+
+  function getCurrentCategory(allCategories) {
+    for (let i = 0; i < allCategories.length; i++) {
+      if (allCategories[i].slug === props.match.params.category_slug) {
+        return allCategories[i];
+      }
+    }
+  }
 
   function getProducts() {
     axios
@@ -54,7 +63,9 @@ function Products(props) {
       .get(`${requestUrls.base_url}${requestUrls.category_list}`)
       .then((res) => {
         if (res.status === 200) {
-          setCategories(res.data.payload.categories);
+          let allCategories = res.data.payload.categories;
+          setCategories(allCategories);
+          setCurrentCategory(getCurrentCategory(allCategories));
           setReRender(!reRender);
         }
       })
@@ -63,29 +74,35 @@ function Products(props) {
       });
   }
 
+  // console.log(currentCategory);
+
   return (
     <div>
       <Header />
-      <section
-        id="products-hero"
-        className="pan-background d-flex align-items-center"
-      >
-        <BgText text="Explore" color="green" />
-        <div className="container">
-          <div className="row justify-content-center align-items-center">
-            <div className="col-md-6">
-              <h5 className="green">Explore</h5>
-              <h4>Models</h4>
-              <HashLink to="#products-top" smooth>
+      {currentCategory && (
+        <section
+          id="products-hero"
+          className="pan-background d-flex align-items-center"
+        >
+          <BgText text="Explore" color="green" />
+          <div className="container">
+            <div className="row justify-content-center align-items-center">
+              <div className="col-md-6">
+                <h5 className="green">Explore</h5>
+                <h4>{currentCategory.title}</h4>
                 <Button text="Products" type="solid" className="mt-3" />
-              </HashLink>
-            </div>
-            <div className="col-md-6">
-              <img src={heroInfo1} alt="Cycle" className="img-fluid" />
+              </div>
+              <div className="col-md-6">
+                <img
+                  src={currentCategory.landing_image}
+                  alt="Cycle"
+                  className="img-fluid"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section id="products-top">
         <div className="container">

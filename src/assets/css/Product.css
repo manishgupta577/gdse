@@ -114,8 +114,10 @@
   }
 } */
 
-#quote-modal input {
+#quote-modal input,
+#quote-modal select {
   border: none;
   border-radius: 0;
   border-bottom: 1px solid var(--black);
+  outline: none;
 }
