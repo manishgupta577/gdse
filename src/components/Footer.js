@@ -403,9 +403,9 @@ const Footer = () => {
                 <p className="white mb-0">Email</p>
                 <a
                   className="font-weight-bold mb-4"
-                  href="mailto:info@gdsebike.com"
+                  href="mailto:contactus@gdsebike.com"
                 >
-                  info@gdsebike.com
+                  contactus@gdsebike.com
                 </a>
                 <p className="white mb-0">Contact</p>
                 <a href="tel:008615975428800">0086-15975428800</a>
