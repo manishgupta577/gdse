@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
 :root {
   --white: #fff;
   --black: #000;
@@ -318,4 +319,8 @@ p {
   border-bottom: 1px solid var(--white);
   border-radius: 0;
   color: var(--white);
+}
+
+#footer i {
+  font-size: 1.7rem;
 }

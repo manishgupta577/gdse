@@ -408,7 +408,26 @@ const Footer = () => {
                   contactus@gdsebike.com
                 </a>
                 <p className="white mb-0">Contact</p>
-                <a href="tel:008615975428800">0086-15975428800</a>
+                <a href="tel:008615975428800" className="font-weight-bold mb-4">
+                  0086-15975428800
+                </a>
+                <p className="white mb-0">Social</p>
+                <div className="d-flex align-items-center social-links justify-content-center">
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/profile.php?id=100061254916622"
+                    className="mx-2"
+                  >
+                    <i className="fab fa-facebook-square"></i>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/gds-ebikes-53a818203/"
+                    className="mx-2"
+                  >
+                    <i className="fab fa-linkedin"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
