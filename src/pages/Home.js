@@ -61,7 +61,7 @@ const Home = (props) => {
                   Manufacturer
                 </h1>
                 <h2 className="white">
-                  12000 Sq. Ft. of manufacturing facility, World class Anti
+                  30,000 Sq. Mt. of manufacturing facility, World class Anti
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
@@ -93,7 +93,7 @@ const Home = (props) => {
                   Manufacturer
                 </h1>
                 <h2 className="white">
-                  12000 Sq. Ft. of manufacturing facility, World class Anti
+                  30,000 Sq. Mt. of manufacturing facility, World class Anti
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
@@ -125,7 +125,7 @@ const Home = (props) => {
                   Manufacturer
                 </h1>
                 <h2 className="white">
-                  12000 Sq. Ft. of manufacturing facility, World class Anti
+                  30,000 Sq. Mt. of manufacturing facility, World class Anti
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
@@ -157,7 +157,7 @@ const Home = (props) => {
                   Manufacturer
                 </h1>
                 <h2 className="white">
-                  12000 Sq. Ft. of manufacturing facility, World class Anti
+                  30,000 Sq. Mt. of manufacturing facility, World class Anti
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">
@@ -189,7 +189,7 @@ const Home = (props) => {
                   Manufacturer
                 </h1>
                 <h2 className="white">
-                  12000 Sq. Ft. of manufacturing facility, World class Anti
+                  30,000 Sq. Mt. of manufacturing facility, World class Anti
                   Dumping solution.
                 </h2>
                 <div className="d-block mt-5">

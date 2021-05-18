@@ -10,6 +10,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "core-js": "^3.9.1",
+    "firebase-tools": "^9.11.0",
     "formik": "^2.2.6",
     "gsap": "^3.6.1",
     "jquery": "^3.6.0",
